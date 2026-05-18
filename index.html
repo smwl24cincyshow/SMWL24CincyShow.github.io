@@ -35,12 +35,45 @@
     }
 
     .info-box {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       background-color: #1c1c1c;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .flyer {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    .details {
+      margin-top: 30px;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    .payment-box {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: #0d1b2a;
+      border: 2px solid #3a86ff;
+      border-radius: 12px;
+      line-height: 1.7;
+    }
+
+    .payment-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .venmo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 10px 0;
     }
 
     .button {
@@ -53,16 +86,11 @@
       font-size: 1.2rem;
       border-radius: 8px;
       transition: 0.3s;
+      font-weight: bold;
     }
 
     .button:hover {
       background-color: #2667cc;
-    }
-
-    .details {
-      margin-top: 30px;
-      line-height: 1.8;
-      font-size: 1.1rem;
     }
 
     footer {
@@ -72,12 +100,6 @@
       font-size: 0.9rem;
       color: #aaa;
     }
-    .flyer {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
-}
   </style>
 </head>
 
@@ -90,9 +112,10 @@
 </header>
 
 <section class="hero">
-
   <div class="info-box">
-<img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24Cincy Car, Truck and Bike Show Flyer">
+
+    <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24Cincy Car, Truck and Bike Show Flyer">
+
     <h2>August 8th, 2026</h2>
 
     <div class="details">
@@ -122,6 +145,26 @@
       </p>
     </div>
 
+    <div class="payment-box">
+      <h2>Payment Instructions</h2>
+
+      <p>
+        Pre-registration is <strong>$20</strong>. Registration is not considered complete until payment has been received.
+      </p>
+
+      <p>Please send payment by Venmo to:</p>
+
+      <div class="venmo">@NCollini</div>
+
+      <p>
+        In the Venmo notes, please include your name and vehicle information.
+      </p>
+
+      <p>
+        Day-of-show registration is <strong>$25 cash or Venmo</strong>, if space is still available.
+      </p>
+    </div>
+
     <a class="button"
       href="https://docs.google.com/forms/d/e/1FAIpQLSfVHS3CpDE0Z7czz5E30otEt_n2hUrQj06R0oA7ZzAQuyQJUw/viewform?usp=header"
       target="_blank">
@@ -129,11 +172,10 @@
     </a>
 
   </div>
-
 </section>
 
 <footer>
-  Contact: ncollini@smw24.org | @NCollini Venmo
+  Contact: ncollini@smw24.org | Venmo: @NCollini
 </footer>
 
 </body>
