@@ -56,7 +56,7 @@
       font-size: 1.1rem;
     }
 
-    .payment-box {
+    .step-box {
       margin-top: 30px;
       padding: 25px;
       background-color: #0d1b2a;
@@ -65,8 +65,22 @@
       line-height: 1.7;
     }
 
-    .payment-box h2 {
-      margin-bottom: 10px;
+    .step-number {
+      color: #ffffff;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .venmo-image {
+      max-width: 330px;
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px auto;
+      display: block;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+      background-color: white;
     }
 
     .venmo {
@@ -78,7 +92,7 @@
 
     .button {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 20px;
       padding: 15px 35px;
       background-color: #3a86ff;
       color: white;
@@ -91,6 +105,16 @@
 
     .button:hover {
       background-color: #2667cc;
+    }
+
+    .important-note {
+      margin-top: 25px;
+      padding: 18px;
+      background-color: #151515;
+      border-left: 4px solid #3a86ff;
+      border-radius: 8px;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -145,19 +169,37 @@
       </p>
     </div>
 
-    <div class="payment-box">
-      <h2>Payment Instructions</h2>
+    <div class="step-box">
+      <div class="step-number">Step 1</div>
+      <h2>Complete Vehicle Registration</h2>
 
       <p>
-        Pre-registration is <strong>$20</strong>. Registration is not considered complete until payment has been received.
+        Start by completing the registration form with your contact information,
+        vehicle details, class/category, and waiver agreement.
       </p>
 
-      <p>Please send payment by Venmo to:</p>
+      <a class="button"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfVHS3CpDE0Z7czz5E30otEt_n2hUrQj06R0oA7ZzAQuyQJUw/viewform?usp=header"
+        target="_blank">
+        REGISTER VEHICLE
+      </a>
+    </div>
+
+    <div class="step-box">
+      <div class="step-number">Step 2</div>
+      <h2>Pay Pre-Registration</h2>
+
+      <p>
+        After submitting your registration form, send your
+        <strong>$20 pre-registration payment</strong> by Venmo.
+      </p>
+
+      <img class="venmo-image" src="Nick Venmo.jpg" alt="Venmo QR Code for @NCollini">
 
       <div class="venmo">@NCollini</div>
 
       <p>
-        In the Venmo notes, please include your name and vehicle information.
+        Please include your name and vehicle information in the Venmo payment notes.
       </p>
 
       <p>
@@ -165,11 +207,10 @@
       </p>
     </div>
 
-    <a class="button"
-      href="https://docs.google.com/forms/d/e/1FAIpQLSfVHS3CpDE0Z7czz5E30otEt_n2hUrQj06R0oA7ZzAQuyQJUw/viewform?usp=header"
-      target="_blank">
-      REGISTER NOW
-    </a>
+    <div class="important-note">
+      <strong>Important:</strong> Registration is not considered complete until payment has been received.
+      Vehicle spaces are accepted on a first come, first served basis.
+    </div>
 
   </div>
 </section>
