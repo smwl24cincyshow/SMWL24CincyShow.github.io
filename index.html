@@ -15,51 +15,17 @@
       text-align: center;
     }
 
-    .site-header {
-      background:
-        linear-gradient(rgba(5, 10, 18, 0.82), rgba(5, 10, 18, 0.88)),
-        linear-gradient(135deg, #0d1b2a, #000000);
-      padding: 55px 20px;
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
       border-bottom: 5px solid #3a86ff;
-      box-shadow: 0 0 25px rgba(58, 134, 255, 0.35);
+      background-color: black;
     }
 
-    .header-badge {
-      display: inline-block;
-      padding: 8px 18px;
-      margin-bottom: 15px;
-      background-color: #3a86ff;
-      color: white;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border-radius: 999px;
-    }
-
-    .site-header h1 {
-      font-size: 4rem;
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: #ffffff;
-      text-shadow:
-        3px 3px 0 #000,
-        0 0 18px rgba(58,134,255,0.8);
-    }
-
-    .site-header h2 {
-      font-size: 2.1rem;
-      margin: 8px 0 12px;
-      color: #3a86ff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .site-header p {
-      margin: 0;
-      color: #ddd;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+    .hero-banner img {
+      width: 100%;
+      display: block;
+      height: auto;
     }
 
     .hero {
@@ -67,7 +33,7 @@
     }
 
     .info-box {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       background-color: #1c1c1c;
       padding: 30px;
@@ -95,6 +61,7 @@
       border: 2px solid #3a86ff;
       border-radius: 12px;
       line-height: 1.7;
+      box-shadow: 0 0 18px rgba(58,134,255,0.15);
     }
 
     .step-number {
@@ -103,6 +70,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 8px;
+      font-weight: bold;
     }
 
     .venmo-image {
@@ -129,7 +97,7 @@
       background-color: #3a86ff;
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       border-radius: 8px;
       transition: 0.3s;
       font-weight: bold;
@@ -150,6 +118,35 @@
       line-height: 1.6;
     }
 
+    .highlight-gallery {
+      margin-top: 50px;
+    }
+
+    .highlight-gallery h2 {
+      margin-bottom: 25px;
+      color: #3a86ff;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+    }
+
     footer {
       margin-top: 60px;
       padding: 20px;
@@ -158,24 +155,39 @@
       color: #aaa;
     }
 
+    @media (max-width: 768px) {
+
+      .hero {
+        padding: 20px 10px;
+      }
+
+      .info-box {
+        padding: 20px;
+      }
+
+      .button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="header-badge">2nd Annual</div>
-  <h1>L24 Cincy</h1>
-  <h2>Car, Truck & Bike Show</h2>
-  <p>Hosted by L24 Cincy</p>
-</header>
+<div class="hero-banner">
+  <img src="assets/banners/banner.png" alt="L24 Cincy Car Truck and Bike Show Banner">
+</div>
 
 <section class="hero">
+
   <div class="info-box">
 
     <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24 Cincy Car, Truck and Bike Show Flyer">
 
-    <a class="button" href="26' Car Show Final Draft wp.png" target="_blank">
+    <a class="button" href="print.html" target="_blank">
       VIEW / PRINT FLYER
     </a>
 
@@ -273,7 +285,24 @@
       Vehicle spaces are accepted on a first come, first served basis.
     </div>
 
+    <div class="highlight-gallery">
+
+      <h2>2025 Show Highlights</h2>
+
+      <div class="gallery-grid">
+
+        <img src="gallery/vehicles/JDW09352 (Large).jpg" alt="Truck Show Vehicle">
+
+        <img src="gallery/vehicles/JDW09321 (Large).jpg" alt="Car Show Vehicles">
+
+        <img src="gallery/vehicles/JDW09349 (Large).jpg" alt="Bike Show Vehicle">
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
 
 <footer>
