@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raffle Gallery | L24 Cincy Car Show</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 5px solid #3a86ff;
+      background-color: black;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .page-content {
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      color: #3a86ff;
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 14px;
+      background-color: #1b1b1b;
+      box-shadow: 0 0 18px rgba(0,0,0,0.45);
+      transition: 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(58,134,255,0.35);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .button-row {
+      margin-top: 50px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 30px;
+      background-color: #3a86ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 14px rgba(58,134,255,0.25);
+    }
+
+    .button:hover {
+      background-color: #2667cc;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #0a0a0a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="hero-banner">
+  <img src="assets/banners/banner.png" alt="L24 Cincy Car Show Banner">
+</div>
+
+<div class="page-content">
+
+  <h1>Raffle Gallery</h1>
+
+  <div class="subtitle">
+    Raffle prizes and donated items from the 1st Annual L24 Cincy Car, Truck & Bike Show
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item"><img src="gallery/raffles/JDW09245 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09246 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09247 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09248 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09249 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09250 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09253 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09254 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09355 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09356 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09359 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09449 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09450 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09451 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09458 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09461 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09467 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09469 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09471 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09474 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09477 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09479 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09490 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09491 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09497 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09498 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09501 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/raffles/JDW09507 (Large).jpg"></div>
+
+  </div>
+
+  <div class="button-row">
+    <a class="button" href="index.html">RETURN HOME</a>
+    <a class="button" href="vehicles.html">VEHICLES</a>
+    <a class="button" href="awards.html">AWARDS</a>
+    <a class="button" href="general.html">GENERAL PHOTOS</a>
+  </div>
+
+</div>
+
+<footer>
+  L24 Cincy Car, Truck & Bike Show
+</footer>
+
+</body>
+</html>
