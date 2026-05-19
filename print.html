@@ -1,18 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Print Flyer</title>
+  <meta charset="UTF-8">
+  <title>Printable Flyer</title>
+
   <style>
-    body { margin: 0; background: white; }
-    img { width: 100%; height: auto; display: block; }
+    @page {
+      size: letter portrait;
+      margin: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    .print-page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .print-page img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     @media print {
-      body { margin: 0; }
-      img { width: 100%; }
+      html, body {
+        background: white;
+      }
+
+      .print-page {
+        width: 8.5in;
+        margin: 0;
+      }
+
+      .print-page img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
+
 <body>
-  <img src="26' Car Show Final Draft wp.png" alt="L24 Cincy Car Show Flyer">
+  <div class="print-page">
+    <img src="final-flyer-2026.png" alt="L24 Cincy Car Show Flyer">
+  </div>
 </body>
 </html>
