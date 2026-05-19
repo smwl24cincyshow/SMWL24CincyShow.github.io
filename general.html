@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>General Gallery | SMW 24 Cincinnati Car & Bike Show</title>
+
+<style>
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+    background:#000;
+    border-bottom:4px solid #00b140;
+}
+
+header h1{
+    margin:0;
+    font-size:3rem;
+    color:#00b140;
+}
+
+header p{
+    margin-top:10px;
+    color:#ccc;
+    font-size:1.1rem;
+}
+
+.back-button{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:#00b140;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-button:hover{
+    background:#009933;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:14px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    padding-top:40px;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background:rgba(0,0,0,.95);
+}
+
+.lightbox img{
+    margin:auto;
+    display:block;
+    max-width:95%;
+    max-height:90vh;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.close:hover{
+    color:#00b140;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>General Gallery</h1>
+    <p>SMW 24 Cincinnati Car & Bike Show</p>
+
+    <a class="back-button" href="index.html">
+        ← Back To Home
+    </a>
+</header>
+
+<div class="gallery">
+
+<img src="gallery/general/JDW09244 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09256 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09299 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09307 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09344 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09383 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09417 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09426 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09427 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09428 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09430 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09434 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09439 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09441 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09442 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09445 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09446 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09447 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09463 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09468 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09470 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09482 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09496 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09509 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09511 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09531 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09624 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09640 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09647 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/JDW09650 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/thumbnail_image0 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/thumbnail_image1 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/thumbnail_image2 (Large).jpg" onclick="openLightbox(this.src)">
+<img src="gallery/general/thumbnail_image3 (Large).jpg" onclick="openLightbox(this.src)">
+
+</div>
+
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src){
+    document.getElementById("lightbox").style.display="block";
+    document.getElementById("lightbox-img").src=src;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
