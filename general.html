@@ -1,177 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General Photos | L24 Cincy Car Show</title>
 
-<title>General Gallery | SMW 24 Cincinnati Car & Bike Show</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
 
-<style>
-body{
-    margin:0;
-    background:#111;
-    color:white;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 5px solid #3a86ff;
+      background-color: black;
+    }
 
-header{
-    text-align:center;
-    padding:40px 20px;
-    background:#000;
-    border-bottom:4px solid #00b140;
-}
+    .hero-banner img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
 
-header h1{
-    margin:0;
-    font-size:3rem;
-    color:#00b140;
-}
+    .page-content {
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-header p{
-    margin-top:10px;
-    color:#ccc;
-    font-size:1.1rem;
-}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
 
-.back-button{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 24px;
-    background:#00b140;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
-}
+    .subtitle {
+      color: #3a86ff;
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+    }
 
-.back-button:hover{
-    background:#009933;
-}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    padding:30px;
-}
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 14px;
+      background-color: #1b1b1b;
+      box-shadow: 0 0 18px rgba(0,0,0,0.45);
+      transition: 0.3s ease;
+    }
 
-.gallery img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:14px;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 0 15px rgba(0,0,0,.5);
-}
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(58,134,255,0.35);
+    }
 
-.gallery img:hover{
-    transform:scale(1.03);
-}
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
 
-.lightbox{
-    display:none;
-    position:fixed;
-    z-index:9999;
-    padding-top:40px;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    overflow:auto;
-    background:rgba(0,0,0,.95);
-}
+    .button-row {
+      margin-top: 50px;
+    }
 
-.lightbox img{
-    margin:auto;
-    display:block;
-    max-width:95%;
-    max-height:90vh;
-    border-radius:10px;
-}
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 30px;
+      background-color: #3a86ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 14px rgba(58,134,255,0.25);
+    }
 
-.close{
-    position:absolute;
-    top:20px;
-    right:35px;
-    color:white;
-    font-size:40px;
-    font-weight:bold;
-    cursor:pointer;
-}
+    .button:hover {
+      background-color: #2667cc;
+    }
 
-.close:hover{
-    color:#00b140;
-}
-</style>
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #0a0a0a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>General Gallery</h1>
-    <p>SMW 24 Cincinnati Car & Bike Show</p>
+<div class="hero-banner">
+  <img src="assets/banners/banner.png" alt="L24 Cincy Car Show Banner">
+</div>
 
-    <a class="back-button" href="index.html">
-        ← Back To Home
-    </a>
-</header>
+<div class="page-content">
 
-<div class="gallery">
+  <h1>General Photos</h1>
 
-<img src="gallery/general/JDW09244 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09256 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09299 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09307 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09344 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09383 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09417 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09426 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09427 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09428 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09430 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09434 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09439 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09441 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09442 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09445 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09446 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09447 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09463 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09468 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09470 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09482 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09496 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09509 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09511 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09531 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09624 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09640 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09647 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/JDW09650 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/thumbnail_image0 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/thumbnail_image1 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/thumbnail_image2 (Large).jpg" onclick="openLightbox(this.src)">
-<img src="gallery/general/thumbnail_image3 (Large).jpg" onclick="openLightbox(this.src)">
+  <div class="subtitle">
+    Community, crowd, and event highlights from the 1st Annual L24 Cincy Car, Truck & Bike Show
+  </div>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item"><img src="gallery/general/JDW09244 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09256 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09299 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09307 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09344 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09383 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09417 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09426 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09427 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09428 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09430 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09434 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09439 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09441 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09442 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09445 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09446 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09447 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09463 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09468 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09470 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09482 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09496 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09509 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09511 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09531 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09624 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09640 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09647 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/JDW09650 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/thumbnail_image0 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/thumbnail_image1 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/thumbnail_image2 (Large).jpg"></div>
+    <div class="gallery-item"><img src="gallery/general/thumbnail_image3 (Large).jpg"></div>
+
+  </div>
+
+  <div class="button-row">
+    <a class="button" href="index.html">RETURN HOME</a>
+    <a class="button" href="vehicles.html">VEHICLES</a>
+    <a class="button" href="awards.html">AWARDS</a>
+    <a class="button" href="raffles.html">RAFFLES</a>
+  </div>
 
 </div>
 
-<div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img">
-</div>
-
-<script>
-function openLightbox(src){
-    document.getElementById("lightbox").style.display="block";
-    document.getElementById("lightbox-img").src=src;
-}
-
-function closeLightbox(){
-    document.getElementById("lightbox").style.display="none";
-}
-</script>
+<footer>
+  L24 Cincy Car, Truck & Bike Show
+</footer>
 
 </body>
 </html>
