@@ -6,12 +6,37 @@
   <title>L24 Cincy Car, Truck & Bike Show</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
       text-align: center;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #070707;
+      border-bottom: 2px solid #3a86ff;
+      padding: 12px 10px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin: 8px 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .nav a:hover {
+      color: #3a86ff;
     }
 
     .hero-banner {
@@ -27,17 +52,38 @@
       height: auto;
     }
 
+    .quick-actions {
+      padding: 25px 15px;
+      background-color: #0d1b2a;
+      border-bottom: 1px solid #333;
+    }
+
     .hero {
       padding: 40px 20px;
     }
 
     .info-box {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
       background-color: #1c1c1c;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .section-box {
+      margin-top: 30px;
+      padding: 25px;
+      background-color: #151515;
+      border-radius: 12px;
+      border: 1px solid #333;
+      line-height: 1.7;
+    }
+
+    .section-box h2 {
+      color: #3a86ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .flyer {
@@ -98,6 +144,17 @@
       background-color: white;
     }
 
+    .qr-image {
+      max-width: 260px;
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px auto;
+      display: block;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.6);
+    }
+
     .venmo {
       font-size: 1.8rem;
       font-weight: bold;
@@ -107,12 +164,12 @@
 
     .button {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px;
       padding: 15px 35px;
       background-color: #3a86ff;
       color: white;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       border-radius: 8px;
       transition: 0.3s;
       font-weight: bold;
@@ -121,6 +178,7 @@
 
     .button:hover {
       background-color: #2667cc;
+      transform: translateY(-2px);
     }
 
     .important-note {
@@ -133,24 +191,32 @@
       line-height: 1.6;
     }
 
-    .gallery-section {
-      margin-top: 50px;
-      padding: 25px;
-      background-color: #151515;
-      border-radius: 12px;
-      border: 1px solid #333;
+    .countdown {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    .gallery-section h2 {
-      color: #3a86ff;
+    .countdown-box {
+      background-color: #0d1b2a;
+      border: 1px solid #3a86ff;
+      border-radius: 10px;
+      padding: 15px 20px;
+      min-width: 90px;
+    }
+
+    .countdown-box strong {
+      display: block;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .countdown-box span {
+      color: #aaa;
+      font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .gallery-section p {
-      color: #ddd;
-      line-height: 1.6;
     }
 
     .gallery-card-grid {
@@ -221,7 +287,16 @@
     }
 
     .general-card {
-      background-image: url("gallery/general/thumbnail_image0 (Large).jpg");
+      background-image: url("gallery/general/JDW09244 (Large).jpg");
+    }
+
+    .sponsor-placeholder {
+      margin-top: 20px;
+      padding: 30px;
+      border: 2px dashed #3a86ff;
+      border-radius: 12px;
+      color: #ccc;
+      background-color: #0d1b2a;
     }
 
     footer {
@@ -233,6 +308,12 @@
     }
 
     @media (max-width: 768px) {
+      .nav a {
+        display: inline-block;
+        margin: 6px 8px;
+        font-size: 0.85rem;
+      }
+
       .hero {
         padding: 20px 10px;
       }
@@ -259,12 +340,51 @@
 
 <body>
 
-<div class="hero-banner">
+<nav class="nav">
+  <a href="#home">Home</a>
+  <a href="#register">Register</a>
+  <a href="#payment">Payment</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#sponsors">Sponsors</a>
+  <a href="#share">QR Code</a>
+</nav>
+
+<div id="home" class="hero-banner">
   <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car Truck and Bike Show Banner">
+</div>
+
+<div class="quick-actions">
+  <a class="button" href="#register">REGISTER NOW</a>
+  <a class="button" href="#payment">PAYMENT OPTIONS</a>
+  <a class="button" href="print.html" target="_blank">PRINT FLYER</a>
 </div>
 
 <section class="hero">
   <div class="info-box">
+
+    <div class="section-box">
+      <h2>About The Show</h2>
+      <p>
+        The L24 Cincy Car, Truck & Bike Show brings together union members, local businesses,
+        automotive enthusiasts, families, and the surrounding community for a day of vehicles,
+        fellowship, and support for the skilled trades.
+      </p>
+      <p>
+        Proceeds from this event help support local apprentices entering the sheet metal trade.
+        Your participation helps invest in future craftspeople while strengthening community
+        connections throughout the Cincinnati area.
+      </p>
+    </div>
+
+    <div class="section-box">
+      <h2>Countdown To Showtime</h2>
+      <div class="countdown">
+        <div class="countdown-box"><strong id="days">0</strong><span>Days</span></div>
+        <div class="countdown-box"><strong id="hours">0</strong><span>Hours</span></div>
+        <div class="countdown-box"><strong id="minutes">0</strong><span>Minutes</span></div>
+        <div class="countdown-box"><strong id="seconds">0</strong><span>Seconds</span></div>
+      </div>
+    </div>
 
     <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24 Cincy Car, Truck and Bike Show Flyer">
 
@@ -298,14 +418,9 @@
         Vehicle spaces are limited and accepted on a first come,
         first served basis until all available spots are filled.
       </p>
-
-      <p>
-        Proceeds from this event help support local apprentices
-        entering the sheet metal trade.
-      </p>
     </div>
 
-    <div class="step-box">
+    <div id="register" class="step-box">
       <div class="step-number">Step 1</div>
 
       <h2>Complete Vehicle Registration</h2>
@@ -321,9 +436,14 @@
         target="_blank">
         REGISTER VEHICLE
       </a>
+
+      <div class="important-note">
+        <strong>Registration Notice:</strong>
+        Pre-registration is not considered complete until payment has been received.
+      </div>
     </div>
 
-    <div class="step-box">
+    <div id="payment" class="step-box">
       <div class="step-number">Step 2</div>
 
       <h2>Submit Registration Payment</h2>
@@ -363,7 +483,7 @@
       Vehicle spaces are accepted on a first come, first served basis.
     </div>
 
-    <div class="gallery-section">
+    <div id="gallery" class="section-box">
       <h2>Past Show Gallery</h2>
 
       <p>
@@ -404,12 +524,61 @@
       </div>
     </div>
 
+    <div id="sponsors" class="section-box">
+      <h2>Current Sponsors</h2>
+      <p>
+        Sponsor information and logos will be added as they become available.
+      </p>
+
+      <div class="sponsor-placeholder">
+        Sponsor logos coming soon.
+      </div>
+    </div>
+
+    <div id="share" class="section-box">
+      <h2>Scan To Visit The Event Page</h2>
+      <p>
+        Use this QR code to share the official L24 Cincy Car, Truck & Bike Show website.
+      </p>
+
+      <img class="qr-image" src="assets/qr/site-qr.png" alt="L24 Cincy Show Website QR Code">
+
+      <p>
+        Website: <strong>smwl24cincyshow.github.io</strong>
+      </p>
+    </div>
+
   </div>
 </section>
 
 <footer>
   Contact: ncollini@smw24.org | Venmo: @NCollini
 </footer>
+
+<script>
+  const eventDate = new Date("August 8, 2026 12:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("days").innerText = "0";
+      document.getElementById("hours").innerText = "0";
+      document.getElementById("minutes").innerText = "0";
+      document.getElementById("seconds").innerText = "0";
+      return;
+    }
+
+    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
