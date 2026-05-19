@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vehicle Gallery | L24 Cincy Car Show</title>
 
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 5px solid #3a86ff;
+      background-color: black;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .page-content {
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      color: #3a86ff;
+      margin-bottom: 40px;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.5);
+      transition: 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 24px rgba(58,134,255,0.4);
+    }
+
+    .button-row {
+      margin-top: 45px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      background-color: #3a86ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #2667cc;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #0a0a0a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="hero-banner">
+  <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car Show Banner">
+</div>
+
+<div class="page-content">
+
+  <h1>Vehicle Gallery</h1>
+
+  <div class="subtitle">
+    Highlights from the 1st Annual L24 Cincy Car, Truck & Bike Show
+  </div>
+
+  <div class="gallery-grid">
+
+    <img src="gallery/vehicles/JDW09352 (Large).jpg" alt="Vehicle Photo">
+
+    <img src="gallery/vehicles/JDW09321 (Large).jpg" alt="Vehicle Photo">
+
+    <img src="gallery/vehicles/JDW09349 (Large).jpg" alt="Vehicle Photo">
+
+  </div>
+
+  <div class="button-row">
+
+    <a class="button" href="index.html">
+      RETURN HOME
+    </a>
+
+    <a class="button" href="awards.html">
+      VIEW AWARDS
+    </a>
+
+  </div>
+
+</div>
+
+<footer>
+  L24 Cincy Car, Truck & Bike Show
+</footer>
+
+</body>
+</html>
