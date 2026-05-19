@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Printable Flyer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    @page {
-      size: letter portrait;
-      margin: 0;
+<title>Printable Flyer</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    width:100%;
+    height:100%;
+    background:white;
+    overflow:auto;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:20px;
+}
+
+.flyer-container{
+    width:100%;
+    max-width:850px;
+}
+
+.flyer-container img{
+    width:100%;
+    height:auto;
+    display:block;
+    box-shadow:0 0 25px rgba(0,0,0,.35);
+}
+
+@media print{
+
+    @page{
+        size:letter portrait;
+        margin:0;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: white;
-      width: 100%;
-      min-height: 100%;
+    html, body{
+        background:white;
     }
 
-    .print-page {
-      width: 8.5in;
-      min-height: 11in;
-      margin: 0 auto;
-      background: white;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    body{
+        padding:0;
+        margin:0;
     }
 
-    .print-page img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .flyer-container{
+        width:8.5in;
+        max-width:8.5in;
     }
 
-    @media print {
-      html, body {
-        background: white;
-      }
-
-      .print-page {
-        width: 8.5in;
-        margin: 0;
-      }
-
-      .print-page img {
-        width: 100%;
-        height: auto;
-      }
+    .flyer-container img{
+        width:100%;
+        height:auto;
+        box-shadow:none;
     }
-  </style>
+
+}
+
+</style>
 </head>
 
 <body>
-  <div class="print-page">
-    <img src="final-flyer-2026.png" alt="L24 Cincy Car Show Flyer">
-  </div>
+
+<div class="flyer-container">
+
+<img src="final Flyer qr" alt="L24 Cincy Car Show Flyer">
+
+</div>
+
 </body>
 </html>
