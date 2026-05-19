@@ -193,6 +193,34 @@ body{
     line-height:1.6;
 }
 
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.countdown-box{
+    background:#0d1b2a;
+    border:1px solid #3a86ff;
+    border-radius:10px;
+    padding:15px 20px;
+    min-width:90px;
+}
+
+.countdown-box strong{
+    display:block;
+    font-size:2rem;
+    color:white;
+}
+
+.countdown-box span{
+    color:#aaa;
+    font-size:.9rem;
+    text-transform:uppercase;
+}
+
 .gallery-card-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -357,6 +385,36 @@ the sheet metal trade while strengthening community connections throughout Cinci
 
 </div>
 
+<div class="section-box">
+
+<h2>Countdown To Showtime</h2>
+
+<div class="countdown">
+
+<div class="countdown-box">
+<strong id="days">0</strong>
+<span>Days</span>
+</div>
+
+<div class="countdown-box">
+<strong id="hours">0</strong>
+<span>Hours</span>
+</div>
+
+<div class="countdown-box">
+<strong id="minutes">0</strong>
+<span>Minutes</span>
+</div>
+
+<div class="countdown-box">
+<strong id="seconds">0</strong>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</div>
+
 <img class="flyer" src="final-flyer.png" alt="L24 Cincy Car Show Flyer">
 
 <a class="button" href="print.html" target="_blank">
@@ -439,6 +497,11 @@ Online payment may be submitted through Venmo using the QR code below.
 Please include your name and vehicle information in the Venmo payment notes.
 </p>
 
+<div class="important-note">
+Participants may also submit registration payment
+in person at the Local 24 Union Hall prior to the event.
+</div>
+
 </div>
 
 <div id="gallery" class="section-box">
@@ -510,6 +573,39 @@ alt="QR Code">
 <footer>
 Contact: ncollini@smw24.org | Venmo: @NCollini
 </footer>
+
+<script>
+
+const eventDate = new Date("August 8, 2026 12:00:00").getTime();
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if(distance <= 0){
+        return;
+    }
+
+    document.getElementById("days").innerText =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("hours").innerText =
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    document.getElementById("minutes").innerText =
+        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("seconds").innerText =
+        Math.floor((distance % (1000 * 60)) / 1000);
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+</script>
 
 </body>
 </html>
