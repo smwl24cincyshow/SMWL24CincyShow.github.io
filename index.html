@@ -123,28 +123,6 @@
       background-color: #2667cc;
     }
 
-    .gallery-links {
-      margin-top: 45px;
-      padding: 25px;
-      background-color: #151515;
-      border-radius: 12px;
-      border: 1px solid #333;
-    }
-
-    .gallery-links h2 {
-      color: #3a86ff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .gallery-button-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
     .important-note {
       margin-top: 25px;
       padding: 18px;
@@ -153,6 +131,97 @@
       border-radius: 8px;
       font-size: 1rem;
       line-height: 1.6;
+    }
+
+    .gallery-section {
+      margin-top: 50px;
+      padding: 25px;
+      background-color: #151515;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .gallery-section h2 {
+      color: #3a86ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-section p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .gallery-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .gallery-card {
+      position: relative;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 18px rgba(0,0,0,0.55);
+      transition: 0.3s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 26px rgba(58,134,255,0.45);
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.25));
+    }
+
+    .gallery-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px;
+      z-index: 2;
+    }
+
+    .gallery-card-content h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .gallery-card-content span {
+      display: block;
+      margin-top: 8px;
+      color: #cfe4ff;
+      font-size: 0.95rem;
+    }
+
+    .vehicles-card {
+      background-image: url("gallery/vehicles/JDW09352 (Large).jpg");
+    }
+
+    .awards-card {
+      background-image: url("gallery/awards/JDW09525 (Large).jpg");
+    }
+
+    .raffles-card {
+      background-image: url("gallery/raffles/JDW09245 (Large).jpg");
+    }
+
+    .general-card {
+      background-image: url("gallery/general/thumbnail_image0 (Large).jpg");
     }
 
     footer {
@@ -179,6 +248,10 @@
 
       .venue-logo {
         max-width: 180px;
+      }
+
+      .gallery-card {
+        height: 200px;
       }
     }
   </style>
@@ -290,19 +363,44 @@
       Vehicle spaces are accepted on a first come, first served basis.
     </div>
 
-    <div class="gallery-links">
+    <div class="gallery-section">
       <h2>Past Show Gallery</h2>
 
       <p>
         View highlights from our first annual show, including vehicles, awards,
-        raffle items, and event photos.
+        raffle items, and community event photos.
       </p>
 
-      <div class="gallery-button-row">
-        <a class="button" href="vehicles.html">Vehicles</a>
-        <a class="button" href="awards.html">Awards</a>
-        <a class="button" href="raffles.html">Raffles</a>
-        <a class="button" href="general.html">General Photos</a>
+      <div class="gallery-card-grid">
+
+        <a class="gallery-card vehicles-card" href="vehicles.html">
+          <div class="gallery-card-content">
+            <h3>Vehicles</h3>
+            <span>Cars, trucks, bikes & show entries</span>
+          </div>
+        </a>
+
+        <a class="gallery-card awards-card" href="awards.html">
+          <div class="gallery-card-content">
+            <h3>Awards</h3>
+            <span>Trophies, winners & presentation photos</span>
+          </div>
+        </a>
+
+        <a class="gallery-card raffles-card" href="raffles.html">
+          <div class="gallery-card-content">
+            <h3>Raffles</h3>
+            <span>Raffle prizes and donated items</span>
+          </div>
+        </a>
+
+        <a class="gallery-card general-card" href="general.html">
+          <div class="gallery-card-content">
+            <h3>General Photos</h3>
+            <span>Community, crowd & event highlights</span>
+          </div>
+        </a>
+
       </div>
     </div>
 
