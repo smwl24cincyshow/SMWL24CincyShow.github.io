@@ -6,7 +6,6 @@
   <title>L24 Cincy Car, Truck & Bike Show</title>
 
   <style>
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -52,6 +51,22 @@
       margin-top: 30px;
       line-height: 1.8;
       font-size: 1.1rem;
+    }
+
+    .venue-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      margin: 25px auto;
+      flex-wrap: wrap;
+    }
+
+    .venue-logo {
+      max-width: 220px;
+      background: white;
+      padding: 12px;
+      border-radius: 12px;
     }
 
     .step-box {
@@ -108,6 +123,28 @@
       background-color: #2667cc;
     }
 
+    .gallery-links {
+      margin-top: 45px;
+      padding: 25px;
+      background-color: #151515;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .gallery-links h2 {
+      color: #3a86ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .gallery-button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
     .important-note {
       margin-top: 25px;
       padding: 18px;
@@ -116,35 +153,6 @@
       border-radius: 8px;
       font-size: 1rem;
       line-height: 1.6;
-    }
-
-    .highlight-gallery {
-      margin-top: 50px;
-    }
-
-    .highlight-gallery h2 {
-      margin-bottom: 25px;
-      color: #3a86ff;
-      font-size: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 18px rgba(0,0,0,0.5);
-      transition: 0.3s;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.02);
     }
 
     footer {
@@ -156,7 +164,6 @@
     }
 
     @media (max-width: 768px) {
-
       .hero {
         padding: 20px 10px;
       }
@@ -170,19 +177,20 @@
         box-sizing: border-box;
       }
 
+      .venue-logo {
+        max-width: 180px;
+      }
     }
-
   </style>
 </head>
 
 <body>
 
 <div class="hero-banner">
-  <img src="assets/banners/banner.png" alt="L24 Cincy Car Truck and Bike Show Banner">
+  <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car Truck and Bike Show Banner">
 </div>
 
 <section class="hero">
-
   <div class="info-box">
 
     <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24 Cincy Car, Truck and Bike Show Flyer">
@@ -194,15 +202,18 @@
     <h2>August 8th, 2026</h2>
 
     <div class="details">
-
       <p><strong>Time:</strong> 12:00 PM – 5:00 PM</p>
 
-      <p>
-        <strong>Location:</strong><br>
-        Quaker Steak & Lube<br>
-        3737 Stone Creek Blvd<br>
-        Colerain Township, OH 45251
-      </p>
+      <div class="venue-row">
+        <img class="venue-logo" src="assets/logos/QSL-Color-Logo.png" alt="Quaker Steak and Lube Logo">
+
+        <p>
+          <strong>Location:</strong><br>
+          Quaker Steak & Lube<br>
+          3737 Stone Creek Blvd<br>
+          Colerain Township, OH 45251
+        </p>
+      </div>
 
       <p>
         <strong>Registration:</strong><br>
@@ -219,11 +230,9 @@
         Proceeds from this event help support local apprentices
         entering the sheet metal trade.
       </p>
-
     </div>
 
     <div class="step-box">
-
       <div class="step-number">Step 1</div>
 
       <h2>Complete Vehicle Registration</h2>
@@ -239,11 +248,9 @@
         target="_blank">
         REGISTER VEHICLE
       </a>
-
     </div>
 
     <div class="step-box">
-
       <div class="step-number">Step 2</div>
 
       <h2>Submit Registration Payment</h2>
@@ -267,7 +274,6 @@
 
       <div class="important-note">
         <strong>Additional Payment Option:</strong><br><br>
-
         Participants may also submit registration payment
         in person at the Local 24 Union Hall prior to the event.
       </div>
@@ -276,7 +282,6 @@
         Day-of-show registration will be available for
         <strong>$25</strong> based on remaining vehicle space availability.
       </p>
-
     </div>
 
     <div class="important-note">
@@ -285,24 +290,23 @@
       Vehicle spaces are accepted on a first come, first served basis.
     </div>
 
-    <div class="highlight-gallery">
+    <div class="gallery-links">
+      <h2>Past Show Gallery</h2>
 
-      <h2>2025 Show Highlights</h2>
+      <p>
+        View highlights from our first annual show, including vehicles, awards,
+        raffle items, and event photos.
+      </p>
 
-      <div class="gallery-grid">
-
-        <img src="gallery/vehicles/JDW09352 (Large).jpg" alt="Truck Show Vehicle">
-
-        <img src="gallery/vehicles/JDW09321 (Large).jpg" alt="Car Show Vehicles">
-
-        <img src="gallery/vehicles/JDW09349 (Large).jpg" alt="Bike Show Vehicle">
-
+      <div class="gallery-button-row">
+        <a class="button" href="vehicles.html">Vehicles</a>
+        <a class="button" href="awards.html">Awards</a>
+        <a class="button" href="raffles.html">Raffles</a>
+        <a class="button" href="general.html">General Photos</a>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 <footer>
