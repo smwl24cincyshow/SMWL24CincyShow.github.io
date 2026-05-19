@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>L24Cincy Car, Truck & Bike Show</title>
+  <title>L24 Cincy Car, Truck & Bike Show</title>
 
   <style>
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,20 +15,51 @@
       text-align: center;
     }
 
-    header {
-      background: linear-gradient(to right, #0d1b2a, #1b263b);
-      padding: 40px 20px;
-      border-bottom: 4px solid #3a86ff;
+    .site-header {
+      background:
+        linear-gradient(rgba(5, 10, 18, 0.82), rgba(5, 10, 18, 0.88)),
+        linear-gradient(135deg, #0d1b2a, #000000);
+      padding: 55px 20px;
+      border-bottom: 5px solid #3a86ff;
+      box-shadow: 0 0 25px rgba(58, 134, 255, 0.35);
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .header-badge {
+      display: inline-block;
+      padding: 8px 18px;
+      margin-bottom: 15px;
+      background-color: #3a86ff;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-radius: 999px;
     }
 
-    h2 {
+    .site-header h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ffffff;
+      text-shadow:
+        3px 3px 0 #000,
+        0 0 18px rgba(58,134,255,0.8);
+    }
+
+    .site-header h2 {
+      font-size: 2.1rem;
+      margin: 8px 0 12px;
       color: #3a86ff;
-      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .site-header p {
+      margin: 0;
+      color: #ddd;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
     }
 
     .hero {
@@ -101,6 +133,7 @@
       border-radius: 8px;
       transition: 0.3s;
       font-weight: bold;
+      box-shadow: 0 0 15px rgba(58,134,255,0.35);
     }
 
     .button:hover {
@@ -124,21 +157,23 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>2nd Annual</h1>
-  <h1>L24Cincy Car, Truck & Bike Show</h1>
-  <h2>Hosted by L24Cincy</h2>
+<header class="site-header">
+  <div class="header-badge">2nd Annual</div>
+  <h1>L24 Cincy</h1>
+  <h2>Car, Truck & Bike Show</h2>
+  <p>Hosted by L24 Cincy</p>
 </header>
 
 <section class="hero">
   <div class="info-box">
 
-    <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24Cincy Car, Truck and Bike Show Flyer">
+    <img class="flyer" src="26' Car Show Final Draft wp.png" alt="L24 Cincy Car, Truck and Bike Show Flyer">
 
     <a class="button" href="26' Car Show Final Draft wp.png" target="_blank">
       VIEW / PRINT FLYER
@@ -147,6 +182,7 @@
     <h2>August 8th, 2026</h2>
 
     <div class="details">
+
       <p><strong>Time:</strong> 12:00 PM – 5:00 PM</p>
 
       <p>
@@ -171,10 +207,13 @@
         Proceeds from this event help support local apprentices
         entering the sheet metal trade.
       </p>
+
     </div>
 
     <div class="step-box">
+
       <div class="step-number">Step 1</div>
+
       <h2>Complete Vehicle Registration</h2>
 
       <p>
@@ -188,14 +227,17 @@
         target="_blank">
         REGISTER VEHICLE
       </a>
+
     </div>
 
     <div class="step-box">
+
       <div class="step-number">Step 2</div>
+
       <h2>Submit Registration Payment</h2>
 
       <p>
-        Pre-registration for the 2nd Annual L24Cincy Car, Truck & Bike Show is
+        Pre-registration for the 2nd Annual L24 Cincy Car, Truck & Bike Show is
         <strong>$20 per vehicle</strong>.
       </p>
 
@@ -222,10 +264,12 @@
         Day-of-show registration will be available for
         <strong>$25</strong> based on remaining vehicle space availability.
       </p>
+
     </div>
 
     <div class="important-note">
-      <strong>Important:</strong> Pre-registration is not considered complete until payment has been received.
+      <strong>Important:</strong>
+      Pre-registration is not considered complete until payment has been received.
       Vehicle spaces are accepted on a first come, first served basis.
     </div>
 
