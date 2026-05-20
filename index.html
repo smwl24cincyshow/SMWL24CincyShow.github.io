@@ -141,6 +141,10 @@ body{
     margin-bottom:22px;
 }
 
+.price-row:last-child{
+    margin-bottom:0;
+}
+
 .price{
     font-size:3.4rem;
     font-weight:900;
@@ -153,15 +157,6 @@ body{
     font-size:1.3rem;
     margin-top:5px;
     font-weight:bold;
-}
-
-.vehicle-limit{
-    margin-top:25px;
-    font-size:1rem;
-    color:#3a86ff;
-    font-weight:bold;
-    letter-spacing:1px;
-    text-transform:uppercase;
 }
 
 .step-box{
@@ -232,12 +227,15 @@ body{
 
 .important-note{
     margin-top:25px;
-    padding:18px;
-    background:#151515;
-    border-left:4px solid #3a86ff;
-    border-radius:8px;
-    font-size:1rem;
-    line-height:1.6;
+    padding:22px;
+    background:#111827;
+    border:2px solid #3a86ff;
+    border-left:8px solid #3a86ff;
+    border-radius:10px;
+    font-size:1.05rem;
+    line-height:1.7;
+    color:#ffffff;
+    box-shadow:0 0 18px rgba(58,134,255,.18);
 }
 
 .hall-payment-box{
@@ -551,10 +549,6 @@ Colerain Township, OH 45251
 <div class="price-text">Day Of Show</div>
 </div>
 
-<div class="vehicle-limit">
-100 Vehicle Limit
-</div>
-
 </div>
 
 </div>
@@ -706,6 +700,10 @@ function updateCountdown(){
     const distance = eventDate - now;
 
     if(distance <= 0){
+        document.getElementById("days").innerText = "0";
+        document.getElementById("hours").innerText = "0";
+        document.getElementById("minutes").innerText = "0";
+        document.getElementById("seconds").innerText = "0";
         return;
     }
 
