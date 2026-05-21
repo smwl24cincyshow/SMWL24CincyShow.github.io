@@ -29,9 +29,9 @@ body{
 .nav a{
     color:white;
     text-decoration:none;
-    margin:8px 12px;
+    margin:8px 10px;
     font-weight:bold;
-    font-size:.95rem;
+    font-size:.92rem;
 }
 
 .nav a:hover{color:#3a86ff;}
@@ -47,12 +47,6 @@ body{
     width:100%;
     display:block;
     height:auto;
-}
-
-.quick-actions{
-    padding:25px 15px;
-    background:#0d1b2a;
-    border-bottom:1px solid #333;
 }
 
 .hero{padding:40px 20px;}
@@ -174,6 +168,12 @@ body{
     display:block;
     box-shadow:0 0 18px rgba(0,0,0,.6);
     background:white;
+    transition:.25s ease;
+}
+
+.venmo-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 24px rgba(58,134,255,.35);
 }
 
 .qr-image{
@@ -185,6 +185,12 @@ body{
     background:white;
     padding:12px;
     box-shadow:0 0 18px rgba(0,0,0,.6);
+    transition:.25s ease;
+}
+
+.qr-image:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 24px rgba(58,134,255,.35);
 }
 
 .venmo{
@@ -282,6 +288,29 @@ body{
     color:#aaa;
     font-size:.9rem;
     text-transform:uppercase;
+}
+
+.registration-counter{
+    display:none;
+    margin-top:25px;
+    padding:24px;
+    background:#071a2d;
+    border:2px solid #3a86ff;
+    border-radius:16px;
+    box-shadow:0 0 22px rgba(58,134,255,.25);
+}
+
+.registration-counter strong{
+    display:block;
+    font-size:2.5rem;
+    color:white;
+}
+
+.registration-counter span{
+    color:#d7e6ff;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:bold;
 }
 
 .gallery-card-grid{
@@ -388,13 +417,71 @@ body{
 .faq-answer p{margin-bottom:18px;}
 .faq-answer p:last-child{margin-bottom:0;}
 
+.sponsor-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+
+.sponsor-card{
+    background:#0d1b2a;
+    border:1px solid #3a86ff;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 0 16px rgba(58,134,255,.12);
+}
+
+.sponsor-card h3{
+    color:#3a86ff;
+    margin-top:0;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.sponsor-card p{
+    margin-bottom:0;
+    color:#d7e6ff;
+}
+
 .sponsor-placeholder{
-    margin-top:20px;
+    margin-top:25px;
     padding:30px;
     border:2px dashed #3a86ff;
     border-radius:12px;
     color:#ccc;
     background:#0d1b2a;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
+.contact-card{
+    background:#0d1b2a;
+    border:1px solid #3a86ff;
+    border-radius:12px;
+    padding:22px;
+}
+
+.contact-card h3{
+    color:#3a86ff;
+    margin-top:0;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.contact-card a{
+    color:white;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.contact-card a:hover{
+    color:#3a86ff;
 }
 
 footer{
@@ -444,17 +531,11 @@ footer{
 <a href="#gallery">Gallery</a>
 <a href="#faq">FAQ</a>
 <a href="#sponsors">Sponsors</a>
-<a href="#share">QR Code</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div id="home" class="hero-banner">
 <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car, Truck and Bike Show Banner">
-</div>
-
-<div class="quick-actions">
-<a class="button" href="#register">REGISTER NOW</a>
-<a class="button" href="#payment">PAYMENT OPTIONS</a>
-<a class="button" href="print.html" target="_blank">PRINT FLYER</a>
 </div>
 
 <section class="hero">
@@ -488,6 +569,11 @@ Until August 8th, 2026
 <div class="countdown-box"><strong id="hours">0</strong><span>Hours</span></div>
 <div class="countdown-box"><strong id="minutes">0</strong><span>Minutes</span></div>
 <div class="countdown-box"><strong id="seconds">0</strong><span>Seconds</span></div>
+</div>
+
+<div class="registration-counter">
+<strong>60+</strong>
+<span>Vehicles Registered</span>
 </div>
 </div>
 
@@ -564,12 +650,18 @@ Pre-registration is <strong>$20 per vehicle</strong>.
 Online payment may be submitted through Venmo using the QR code below.
 </p>
 
+<a href="https://venmo.com/NCollini" target="_blank">
 <img class="venmo-image" src="Nick Venmo.jpg" alt="Venmo QR">
+</a>
 
 <div class="venmo">@NCollini</div>
 
+<a class="button" href="https://venmo.com/NCollini" target="_blank">
+PAY WITH VENMO
+</a>
+
 <p>
-Please include your name and vehicle information in the Venmo payment notes.
+Please include the same name used on your registration form and vehicle information in the Venmo payment notes.
 </p>
 
 <div class="hall-payment-box">
@@ -699,15 +791,83 @@ Common questions regarding registration, judging, raffles, and event logistics.
 <div id="sponsors" class="section-box">
 <h2>Current Sponsors</h2>
 
+<p>
+Confirmed sponsor logos will be added here as they become available.
+</p>
+
 <div class="sponsor-placeholder">
 Sponsor logos coming soon.
+</div>
+
+<h2>Become A Sponsor</h2>
+
+<p>
+Sponsorship helps support local apprentices entering the sheet metal trade while giving your business visibility at a community-focused automotive event.
+</p>
+
+<div class="sponsor-grid">
+
+<div class="sponsor-card">
+<h3>Event Sponsor</h3>
+<p>Recognition on the event website, event materials, and sponsor displays.</p>
+</div>
+
+<div class="sponsor-card">
+<h3>Trophy Sponsor</h3>
+<p>Help sponsor award classes and trophy presentations for show participants.</p>
+</div>
+
+<div class="sponsor-card">
+<h3>Raffle Sponsor</h3>
+<p>Donate raffle prizes, gift cards, baskets, or promotional items.</p>
+</div>
+
+<div class="sponsor-card">
+<h3>Community Sponsor</h3>
+<p>Support apprentices, families, and the continued growth of this annual event.</p>
+</div>
+
+</div>
+
+<a class="button" href="mailto:ncollini@smw24.org?subject=L24%20Cincy%20Car%20Show%20Sponsorship%20Inquiry">
+BECOME A SPONSOR
+</a>
+
+</div>
+
+<div id="contact" class="section-box">
+<h2>Contact</h2>
+
+<p>
+For registration questions, sponsorship opportunities, payment questions, or general event information, please contact Nick Collini.
+</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<a href="mailto:ncollini@smw24.org">ncollini@smw24.org</a>
+</div>
+
+<div class="contact-card">
+<h3>Call or Text</h3>
+<a href="tel:15136178856">513-617-8856</a>
+</div>
+
+<div class="contact-card">
+<h3>Venmo</h3>
+<a href="https://venmo.com/NCollini" target="_blank">@NCollini</a>
+</div>
+
 </div>
 </div>
 
 <div id="share" class="section-box">
 <h2>Scan To Visit The Event Page</h2>
 
-<img class="qr-image" src="assets/qr/smwl24cincyshow-qr.png" alt="QR Code">
+<a href="https://smwl24cincyshow.github.io" target="_blank">
+<img class="qr-image" src="assets/qr/smwl24cincyshow-qr.png" alt="Website QR Code">
+</a>
 
 <p>
 <strong>smwl24cincyshow.github.io</strong>
@@ -722,7 +882,7 @@ Sponsor logos coming soon.
 Hosted by SMART Local 24 Cincinnati
 </div>
 <div>
-Contact: ncollini@smw24.org | Venmo: @NCollini
+Contact: ncollini@smw24.org | Call/Text: 513-617-8856 | Venmo: @NCollini
 </div>
 </footer>
 
