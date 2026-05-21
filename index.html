@@ -7,10 +7,7 @@
 <title>L24 Cincy Car, Truck & Bike Show</title>
 
 <style>
-
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
     margin:0;
@@ -37,9 +34,7 @@ body{
     font-size:.95rem;
 }
 
-.nav a:hover{
-    color:#3a86ff;
-}
+.nav a:hover{color:#3a86ff;}
 
 .hero-banner{
     width:100%;
@@ -60,9 +55,7 @@ body{
     border-bottom:1px solid #333;
 }
 
-.hero{
-    padding:40px 20px;
-}
+.hero{padding:40px 20px;}
 
 .info-box{
     max-width:1000px;
@@ -137,13 +130,8 @@ body{
     text-transform:uppercase;
 }
 
-.price-row{
-    margin-bottom:22px;
-}
-
-.price-row:last-child{
-    margin-bottom:0;
-}
+.price-row{margin-bottom:22px;}
+.price-row:last-child{margin-bottom:0;}
 
 .price{
     font-size:3.4rem;
@@ -352,21 +340,53 @@ body{
     font-size:.95rem;
 }
 
-.vehicles-card{
-    background-image:url("gallery/vehicles/JDW09352 (Large).jpg");
+.vehicles-card{background-image:url("gallery/vehicles/JDW09352 (Large).jpg");}
+.awards-card{background-image:url("gallery/awards/JDW09525 (Large).jpg");}
+.raffles-card{background-image:url("gallery/raffles/JDW09245 (Large).jpg");}
+.general-card{background-image:url("gallery/general/JDW09244 (Large).jpg");}
+
+.faq-subtitle{
+    color:#b8c7db;
+    margin-bottom:25px;
+    font-size:1rem;
 }
 
-.awards-card{
-    background-image:url("gallery/awards/JDW09525 (Large).jpg");
+.faq-container{
+    max-width:900px;
+    margin:auto;
+    text-align:left;
 }
 
-.raffles-card{
-    background-image:url("gallery/raffles/JDW09245 (Large).jpg");
+.faq-question{
+    width:100%;
+    background:#0d1b2a;
+    color:white;
+    border:1px solid #3a86ff;
+    padding:18px 20px;
+    margin-top:12px;
+    font-size:1.05rem;
+    font-weight:bold;
+    text-align:left;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.25s ease;
 }
 
-.general-card{
-    background-image:url("gallery/general/JDW09244 (Large).jpg");
+.faq-question:hover{background:#132742;}
+
+.faq-answer{
+    display:none;
+    background:#111827;
+    padding:20px;
+    border-radius:0 0 10px 10px;
+    border-left:3px solid #3a86ff;
+    border-right:1px solid #333;
+    border-bottom:1px solid #333;
+    line-height:1.8;
 }
+
+.faq-answer p{margin-bottom:18px;}
+.faq-answer p:last-child{margin-bottom:0;}
 
 .sponsor-placeholder{
     margin-top:20px;
@@ -393,44 +413,25 @@ footer{
 }
 
 @media(max-width:768px){
+    .nav a{
+        display:inline-block;
+        margin:6px 8px;
+        font-size:.85rem;
+    }
 
-.nav a{
-    display:inline-block;
-    margin:6px 8px;
-    font-size:.85rem;
+    .hero{padding:20px 10px;}
+    .info-box{padding:20px;}
+
+    .button{
+        width:100%;
+        box-sizing:border-box;
+    }
+
+    .venue-logo{max-width:180px;}
+    .gallery-card{height:200px;}
+    .price{font-size:2.8rem;}
+    .pricing-box h3{font-size:1.5rem;}
 }
-
-.hero{
-    padding:20px 10px;
-}
-
-.info-box{
-    padding:20px;
-}
-
-.button{
-    width:100%;
-    box-sizing:border-box;
-}
-
-.venue-logo{
-    max-width:180px;
-}
-
-.gallery-card{
-    height:200px;
-}
-
-.price{
-    font-size:2.8rem;
-}
-
-.pricing-box h3{
-    font-size:1.5rem;
-}
-
-}
-
 </style>
 </head>
 
@@ -441,6 +442,7 @@ footer{
 <a href="#register">Register</a>
 <a href="#payment">Payment</a>
 <a href="#gallery">Gallery</a>
+<a href="#faq">FAQ</a>
 <a href="#sponsors">Sponsors</a>
 <a href="#share">QR Code</a>
 </nav>
@@ -460,7 +462,6 @@ footer{
 <div class="info-box">
 
 <div class="section-box">
-
 <h2>About The Show</h2>
 
 <p>
@@ -473,11 +474,9 @@ community for a day of vehicles, fellowship, and support for the skilled trades.
 Proceeds from this event help support local apprentices entering
 the sheet metal trade while strengthening community connections throughout Cincinnati.
 </p>
-
 </div>
 
 <div class="section-box">
-
 <h2>Countdown To Showtime</h2>
 
 <div class="countdown-subtitle">
@@ -485,29 +484,11 @@ Until August 8th, 2026
 </div>
 
 <div class="countdown">
-
-<div class="countdown-box">
-<strong id="days">0</strong>
-<span>Days</span>
+<div class="countdown-box"><strong id="days">0</strong><span>Days</span></div>
+<div class="countdown-box"><strong id="hours">0</strong><span>Hours</span></div>
+<div class="countdown-box"><strong id="minutes">0</strong><span>Minutes</span></div>
+<div class="countdown-box"><strong id="seconds">0</strong><span>Seconds</span></div>
 </div>
-
-<div class="countdown-box">
-<strong id="hours">0</strong>
-<span>Hours</span>
-</div>
-
-<div class="countdown-box">
-<strong id="minutes">0</strong>
-<span>Minutes</span>
-</div>
-
-<div class="countdown-box">
-<strong id="seconds">0</strong>
-<span>Seconds</span>
-</div>
-
-</div>
-
 </div>
 
 <img class="flyer" src="final-flyer.png" alt="L24 Cincy Car Show Flyer">
@@ -521,10 +502,7 @@ VIEW / PRINT FLYER
 <p><strong>Time:</strong> 12:00 PM – 5:00 PM</p>
 
 <div class="venue-row">
-
-<img class="venue-logo"
-src="assets/logos/QSL-Color-Logo.png"
-alt="Quaker Steak Logo">
+<img class="venue-logo" src="assets/logos/QSL-Color-Logo.png" alt="Quaker Steak Logo">
 
 <p>
 <strong>Location:</strong><br>
@@ -532,11 +510,9 @@ Quaker Steak & Lube<br>
 3737 Stone Creek Blvd<br>
 Colerain Township, OH 45251
 </p>
-
 </div>
 
 <div class="pricing-box">
-
 <h3>Registration Pricing</h3>
 
 <div class="price-row">
@@ -548,13 +524,11 @@ Colerain Township, OH 45251
 <div class="price">$25</div>
 <div class="price-text">Day Of Show</div>
 </div>
-
 </div>
 
 </div>
 
 <div id="register" class="step-box">
-
 <div class="step-number">Step 1</div>
 
 <h2>Complete Vehicle Registration</h2>
@@ -568,20 +542,16 @@ and waiver agreement.
 <a class="button"
 href="https://docs.google.com/forms/d/e/1FAIpQLSfVHS3CpDE0Z7czz5E30otEt_n2hUrQj06R0oA7ZzAQuyQJUw/viewform?usp=header"
 target="_blank">
-
 REGISTER VEHICLE
-
 </a>
 
 <div class="important-note">
 <strong>Registration Notice:</strong>
 Pre-registration is not considered complete until payment has been received.
 </div>
-
 </div>
 
 <div id="payment" class="step-box">
-
 <div class="step-number">Step 2</div>
 
 <h2>Submit Registration Payment</h2>
@@ -603,20 +573,16 @@ Please include your name and vehicle information in the Venmo payment notes.
 </p>
 
 <div class="hall-payment-box">
-
 <h3>In-Person Payment Available</h3>
 
 <p>
 Participants may also submit registration payment in person at the
 <strong>Local 24 Union Hall</strong> prior to the event.
 </p>
-
 </div>
-
 </div>
 
 <div id="gallery" class="section-box">
-
 <h2>Past Show Gallery</h2>
 
 <div class="gallery-card-grid">
@@ -650,35 +616,105 @@ Participants may also submit registration payment in person at the
 </a>
 
 </div>
+</div>
 
+<div id="faq" class="section-box">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-subtitle">
+Common questions regarding registration, judging, raffles, and event logistics.
+</div>
+
+<div class="faq-container">
+
+<button class="faq-question">🚗 Registration & Participation</button>
+<div class="faq-answer">
+<p><strong>Q:</strong> Can anyone participate and/or register a vehicle?<br>
+<strong>A:</strong> The show is open to the public and we encourage everyone interested to participate!</p>
+
+<p><strong>Q:</strong> Can I register the day of, or do I have to pre-register?<br>
+<strong>A:</strong> We would prefer you to pre-register, but day-of registration will be available. Please call or text Nick at 513-617-8856 with any registration questions.</p>
+
+<p><strong>Q:</strong> Can I register more than one vehicle?<br>
+<strong>A:</strong> Yes, multiple entries are allowed, but each vehicle must be registered separately.</p>
+
+<p><strong>Q:</strong> Is there a registration fee or donation?<br>
+<strong>A:</strong> Yes, pre-registration is $20 per vehicle.</p>
+
+<p><strong>Q:</strong> Are spectators free to attend?<br>
+<strong>A:</strong> Yes.</p>
+</div>
+
+<button class="faq-question">🏆 Judging & Awards</button>
+<div class="faq-answer">
+<p><strong>Q:</strong> Do I have to stay the duration of the show?<br>
+<strong>A:</strong> Yes. If you want to be judged and qualify for trophies, you must remain for the duration of the event.</p>
+
+<p><strong>Q:</strong> Who will be judging?<br>
+<strong>A:</strong> People’s Choice is judged by registered participants. All other trophies will be judged by our panel of judges.</p>
+
+<p><strong>Q:</strong> Can I win more than one trophy?<br>
+<strong>A:</strong> No. If you qualify for more than one, the highest-priority award will be given first.</p>
+
+<p><strong>Q:</strong> How will the Top 10 be determined?<br>
+<strong>A:</strong> By the highest remaining scores after specialty and top awards are assigned.</p>
+
+<p><strong>Q:</strong> How are ties handled in scoring?<br>
+<strong>A:</strong> Ties will be decided by the judges’ panel based on overall points and notes.</p>
+
+<p><strong>Q:</strong> Do judges need me present when looking at my vehicle?<br>
+<strong>A:</strong> Judges may need hoods, doors, or trunks open. Please ensure your vehicle is accessible.</p>
+</div>
+
+<button class="faq-question">🎟 Raffles & Drawings</button>
+<div class="faq-answer">
+<p><strong>Q:</strong> What if I win a raffle or the 50/50 and I already left?<br>
+<strong>A:</strong> All unclaimed raffles will be re-drawn at 5pm if not claimed following the specific drawing.</p>
+</div>
+
+<button class="faq-question">📸 Event Rules & Logistics</button>
+<div class="faq-answer">
+<p><strong>Q:</strong> Will there be professional photos or media at the event?<br>
+<strong>A:</strong> Yes. By participating, you consent to photos of you and your vehicle being used in Local 24 media and promotions.</p>
+
+<p><strong>Q:</strong> Will food, drinks, or restrooms be available?<br>
+<strong>A:</strong> Yes. Quaker Steak has offered a 20% discount on food for participants.</p>
+
+<p><strong>Q:</strong> Can I bring chairs or coolers?<br>
+<strong>A:</strong> Due to limited space we ask that you are considerate of the other participants when setting up anything outside of your parking spot. Coolers are permitted; however, alcoholic beverages are not.</p>
+
+<p><strong>Q:</strong> Are burnouts, donuts, or unsafe driving allowed?<br>
+<strong>A:</strong> No. Unsafe activity may result in removal from the event.</p>
+
+<p><strong>Q:</strong> Is the event rain or shine?<br>
+<strong>A:</strong> Yes, unless severe weather creates unsafe conditions.</p>
+
+<p><strong>Q:</strong> Will trailer parking be available?<br>
+<strong>A:</strong> Limited trailer parking may be available. Please contact Nick in advance if needed.</p>
+</div>
+
+</div>
 </div>
 
 <div id="sponsors" class="section-box">
-
 <h2>Current Sponsors</h2>
 
 <div class="sponsor-placeholder">
 Sponsor logos coming soon.
 </div>
-
 </div>
 
 <div id="share" class="section-box">
-
 <h2>Scan To Visit The Event Page</h2>
 
-<img class="qr-image"
-src="assets/qr/smwl24cincyshow-qr.png"
-alt="QR Code">
+<img class="qr-image" src="assets/qr/smwl24cincyshow-qr.png" alt="QR Code">
 
 <p>
 <strong>smwl24cincyshow.github.io</strong>
 </p>
-
 </div>
 
 </div>
-
 </section>
 
 <footer>
@@ -691,11 +727,9 @@ Contact: ncollini@smw24.org | Venmo: @NCollini
 </footer>
 
 <script>
-
 const eventDate = new Date("August 8, 2026 12:00:00").getTime();
 
 function updateCountdown(){
-
     const now = new Date().getTime();
     const distance = eventDate - now;
 
@@ -718,13 +752,24 @@ function updateCountdown(){
 
     document.getElementById("seconds").innerText =
         Math.floor((distance % (1000 * 60)) / 1000);
-
 }
 
 updateCountdown();
-
 setInterval(updateCountdown,1000);
 
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(question => {
+    question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+
+        if(answer.style.display === "block"){
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    });
+});
 </script>
 
 </body>
