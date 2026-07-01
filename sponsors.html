@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore sponsorship opportunities for the L24 Cincy Car, Truck &amp; Bike Show and support Cincinnati apprentices.">
+  <title>Become a Sponsor | L24 Cincy Car Show</title>
+
+  <style>
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#070707;
+      border-bottom:2px solid #3a86ff;
+      padding:12px 10px;
+      text-align:center;
+    }
+
+    .nav a{
+      color:white;
+      text-decoration:none;
+      margin:8px 10px;
+      font-weight:bold;
+      font-size:.92rem;
+    }
+
+    .nav a:hover,
+    .nav a.active{
+      color:#3a86ff;
+    }
+
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 5px solid #3a86ff;
+      background-color: black;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .page-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section-box{
+      background:#1a1a1a;
+      border:1px solid #333;
+      border-radius:14px;
+      padding:30px;
+      margin-bottom:30px;
+      box-shadow:0 0 20px rgba(0,0,0,.35);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    h2{
+      color:#3a86ff;
+      margin-top:0;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    h3{
+      margin-top:0;
+    }
+
+    p{
+      line-height:1.7;
+    }
+
+    .subtitle {
+      color: #d7e6ff;
+      max-width: 850px;
+      margin: 0 auto 18px;
+      font-size: 1.12rem;
+    }
+
+    .sponsor-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 8px;
+      padding: 14px 30px;
+      background-color: #3a86ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 14px rgba(58,134,255,0.25);
+    }
+
+    .button:hover {
+      background-color: #2667cc;
+    }
+
+    .button.secondary{
+      background:#0d1b2a;
+      border:1px solid #3a86ff;
+    }
+
+    .sponsor-intro{
+      border-top:4px solid #3a86ff;
+      background:linear-gradient(180deg,#151f33,#111827);
+    }
+
+    .sponsor-layout{
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(300px,.8fr);
+      gap:24px;
+      align-items:start;
+    }
+
+    .white-panel{
+      background:#f8fbff;
+      color:#141414;
+      border:1px solid #cbd7ea;
+      border-top:5px solid #003da5;
+      border-radius:10px;
+      padding:24px;
+      text-align:left;
+      box-shadow:0 0 18px rgba(0,0,0,.25);
+    }
+
+    .white-panel h2,
+    .white-panel h3{
+      color:#003da5;
+    }
+
+    .tier-grid{
+      display:grid;
+      gap:14px;
+    }
+
+    .tier-card{
+      display:grid;
+      grid-template-columns:auto 1fr auto;
+      gap:16px;
+      align-items:center;
+      padding:16px;
+      border:1px solid #d1d8e6;
+      border-radius:8px;
+      background:#fff;
+    }
+
+    .tier-badge{
+      width:58px;
+      min-width:58px;
+      height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#003da5;
+      color:#fff;
+      font-weight:bold;
+      border-radius:8px;
+      border:3px solid #d7a900;
+      letter-spacing:.5px;
+    }
+
+    .tier-card:nth-child(2) .tier-badge{border-color:#b8d8ff;}
+    .tier-card:nth-child(3) .tier-badge{border-color:#f0a000;}
+    .tier-card:nth-child(4) .tier-badge{border-color:#c7c7c7;}
+    .tier-card:nth-child(5) .tier-badge{border-color:#3a86ff;}
+
+    .tier-card h3{
+      margin:0 0 6px;
+      color:#111;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+    }
+
+    .tier-card p{
+      margin:0;
+      color:#333;
+      line-height:1.45;
+    }
+
+    .tier-amount{
+      color:#003da5;
+      font-size:1.55rem;
+      font-weight:bold;
+      white-space:nowrap;
+    }
+
+    .check-list,
+    .donation-list{
+      margin:0;
+      padding-left:22px;
+      line-height:1.8;
+    }
+
+    .check-list li,
+    .donation-list li{
+      margin-bottom:4px;
+    }
+
+    .flyer-card{
+      background:#0d1b2a;
+      border:1px solid #3a86ff;
+      border-radius:10px;
+      padding:22px;
+      box-shadow:0 0 18px rgba(58,134,255,.15);
+    }
+
+    .flyer-card h2{
+      color:#fff;
+    }
+
+    .flyer-preview{
+      width:100%;
+      max-height:520px;
+      object-fit:contain;
+      display:block;
+      background:#fff;
+      border-radius:8px;
+      border:1px solid #25466f;
+      margin-bottom:16px;
+    }
+
+    .contact-panel{
+      background:#f8fbff;
+      color:#141414;
+      border-left:5px solid #003da5;
+      border-radius:10px;
+      padding:22px;
+      text-align:left;
+    }
+
+    .contact-panel a{
+      color:#003da5;
+      font-weight:bold;
+    }
+
+    .logo-levels{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .logo-level{
+      min-height:125px;
+      padding:18px;
+      background:#0d1b2a;
+      border:1px dashed #3a86ff;
+      border-radius:8px;
+      color:#d7e6ff;
+      text-align:left;
+    }
+
+    .logo-level h3{
+      color:#3a86ff;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      margin-bottom:8px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background-color: #0a0a0a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media(max-width:900px){
+      .sponsor-layout{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:768px){
+      .nav a{
+        display:inline-block;
+        margin:6px 8px;
+        font-size:.85rem;
+      }
+
+      .page-content{
+        padding:28px 14px;
+      }
+
+      .section-box{
+        padding:22px;
+      }
+
+      h1{
+        font-size:2.2rem;
+      }
+
+      .tier-card{
+        grid-template-columns:1fr;
+        text-align:left;
+      }
+
+      .tier-badge{
+        width:54px;
+        min-width:54px;
+        height:54px;
+      }
+
+      .tier-amount{
+        font-size:1.35rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav class="nav">
+<a href="index.html#home">Home</a>
+<a href="index.html#register">Register</a>
+<a href="index.html#payment">Payment</a>
+<a href="index.html#gallery">Gallery</a>
+<a href="index.html#faq">FAQ</a>
+<a class="active" href="sponsors.html">Sponsors</a>
+<a href="index.html#contact">Contact</a>
+<a href="index.html#share">QR Code</a>
+</nav>
+
+<div class="hero-banner">
+  <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car Show Banner">
+</div>
+
+<div class="page-content">
+
+<section class="section-box sponsor-intro">
+<h1>Become a Sponsor</h1>
+<p class="subtitle">
+Support the 2nd Annual L24 Cincy Car, Truck &amp; Bike Show and help benefit Cincinnati apprentices entering the skilled sheet metal trade.
+</p>
+<div class="sponsor-actions">
+<a class="button" href="mailto:ncollini@smw24.org?subject=L24%20Cincy%20Car%20Show%20Sponsorship%20Inquiry">EMAIL NICK ABOUT SPONSORSHIP</a>
+<a class="button secondary" href="assets/flyers/Untitled design(12).png" target="_blank" rel="noopener">VIEW / DOWNLOAD SPONSORSHIP FLYER</a>
+</div>
+</section>
+
+<div class="sponsor-layout">
+
+<div class="white-panel">
+<h2>Sponsorship Opportunities</h2>
+<p>
+We welcome contributions in the form of cash, gift cards, tools, automotive products, merchandise, services, raffle items, or other donations. Sponsorship recognition is based on the fair market value of the contribution.
+</p>
+
+<div class="tier-grid">
+<div class="tier-card">
+<div class="tier-badge">BIS</div>
+<div>
+<h3>Best in Show Sponsor</h3>
+<p>Our highest level of support and commitment to benefit Cincinnati apprentices.</p>
+</div>
+<div class="tier-amount">$1,000+</div>
+</div>
+
+<div class="tier-card">
+<div class="tier-badge">PL</div>
+<div>
+<h3>Platinum Sponsor</h3>
+<p>Premium level support making a significant impact on the success of the event.</p>
+</div>
+<div class="tier-amount">$500–$999</div>
+</div>
+
+<div class="tier-card">
+<div class="tier-badge">GD</div>
+<div>
+<h3>Gold Sponsor</h3>
+<p>Valued support that helps enhance the show and benefit apprentices.</p>
+</div>
+<div class="tier-amount">$250–$499</div>
+</div>
+
+<div class="tier-card">
+<div class="tier-badge">SL</div>
+<div>
+<h3>Silver Sponsor</h3>
+<p>Essential support that helps make the event possible.</p>
+</div>
+<div class="tier-amount">$50–$249</div>
+</div>
+
+<div class="tier-card">
+<div class="tier-badge">OD</div>
+<div>
+<h3>Other Donation</h3>
+<p>Contributions of any amount or fair market value are greatly appreciated.</p>
+</div>
+<div class="tier-amount">Any value</div>
+</div>
+</div>
+</div>
+
+<aside class="flyer-card">
+<h2>Sponsorship Flyer</h2>
+<img class="flyer-preview" src="assets/flyers/Untitled design(12).png" alt="L24 Cincy sponsorship flyer">
+<p>
+Use the flyer for donation details, event information, and the printable sponsor form.
+</p>
+<a class="button" href="assets/flyers/Untitled design(12).png" target="_blank" rel="noopener">VIEW / DOWNLOAD FLYER</a>
+</aside>
+
+</div>
+
+<section class="section-box">
+<div class="sponsor-layout">
+<div class="white-panel">
+<h2>Donation Examples</h2>
+<ul class="donation-list">
+<li>Gift cards</li>
+<li>Tools</li>
+<li>Automotive products</li>
+<li>Merchandise</li>
+<li>Services</li>
+<li>Raffle items</li>
+<li>Cash contributions</li>
+</ul>
+</div>
+
+<div class="white-panel">
+<h2>Sponsor Recognition</h2>
+<ul class="check-list">
+<li>Recognition on the official website</li>
+<li>Recognition on event social media</li>
+<li>Recognition throughout the event whenever possible</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section-box">
+<h2>Sponsor Logo Recognition</h2>
+<p>
+Confirmed sponsor logos will be organized here by sponsorship level as they become available.
+</p>
+<div class="logo-levels">
+<div class="logo-level"><h3>Best in Show</h3><p>Logo recognition coming soon.</p></div>
+<div class="logo-level"><h3>Platinum</h3><p>Logo recognition coming soon.</p></div>
+<div class="logo-level"><h3>Gold</h3><p>Logo recognition coming soon.</p></div>
+<div class="logo-level"><h3>Silver</h3><p>Logo recognition coming soon.</p></div>
+<div class="logo-level"><h3>Other Donations</h3><p>Donor recognition coming soon.</p></div>
+</div>
+</section>
+
+<section class="section-box">
+<div class="contact-panel">
+<h2>Questions? Contact Nick</h2>
+<p>
+For sponsorship questions or to discuss a donation, contact Nick Collini, Business Agent, Sheet Metal Workers Local 24.
+</p>
+<p>
+<strong>Phone:</strong> <a href="tel:15136178856">513-617-8856</a><br>
+<strong>Email:</strong> <a href="mailto:ncollini@smw24.org">ncollini@smw24.org</a>
+</p>
+<div class="sponsor-actions">
+<a class="button" href="mailto:ncollini@smw24.org?subject=L24%20Cincy%20Car%20Show%20Sponsorship%20Inquiry">EMAIL NICK</a>
+<a class="button secondary" href="index.html#contact">VIEW MAIN CONTACT SECTION</a>
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+  L24 Cincy Car, Truck &amp; Bike Show
+</footer>
+
+</body>
+</html>
