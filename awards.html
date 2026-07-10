@@ -1,265 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="View awards, trophies, winners, and highlight photos from the L24 Cincy Car, Truck &amp; Bike Show.">
-  <title>Awards Gallery | L24 Cincy Car Show</title>
-
-  <style>
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-      text-align: center;
-    }
-
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:#070707;
-      border-bottom:2px solid #3a86ff;
-      padding:12px 10px;
-      text-align:center;
-    }
-
-    .nav a{
-      color:white;
-      text-decoration:none;
-      margin:8px 10px;
-      font-weight:bold;
-      font-size:.92rem;
-    }
-
-    .nav a:hover{
-      color:#3a86ff;
-    }
-
-    .hero-banner {
-      width: 100%;
-      overflow: hidden;
-      border-bottom: 5px solid #3a86ff;
-      background-color: black;
-    }
-
-    .hero-banner img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .page-content {
-      max-width: 1600px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-
-    .subtitle {
-      color: #3a86ff;
-      margin-bottom: 40px;
-      font-size: 1.2rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 22px;
-    }
-
-    .gallery-item {
-      overflow: hidden;
-      border-radius: 14px;
-      background-color: #1b1b1b;
-      box-shadow: 0 0 18px rgba(0,0,0,0.45);
-      transition: 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 24px rgba(58,134,255,0.35);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      display: block;
-    }
-
-    .button-row {
-      margin-top: 50px;
-    }
-
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 30px;
-      background-color: #3a86ff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 0 14px rgba(58,134,255,0.25);
-    }
-
-    .button:hover {
-      background-color: #2667cc;
-    }
-
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      background-color: #0a0a0a;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    @media(max-width:768px){
-
-      .nav a{
-        display:inline-block;
-        margin:6px 8px;
-        font-size:.85rem;
-      }
-
-      h1{
-        font-size:2.2rem;
-      }
-
-      .gallery-grid{
-        grid-template-columns:1fr;
-      }
-
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="View all 24 award categories, judging information, and previous winners for the L24 Cincy Car, Truck & Bike Show.">
+<title>Awards & Judging | L24 Cincy Car Show</title>
+<style>
+:root{--blue:#2878ff;--gold:#ffc400;--silver:#b8b8b8;--orange:#ff7600;--page:#090909;--text:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--page);text-align:center}
+.nav{position:sticky;top:0;z-index:1000;padding:12px 10px;background:#070707;border-bottom:2px solid var(--blue)}
+.nav a{margin:8px 10px;color:#fff;font-size:.92rem;font-weight:700;text-decoration:none}
+.nav a:hover,.nav a.active{color:var(--blue)}
+.awards-hero{position:relative;min-height:400px;overflow:hidden;border-bottom:2px solid rgba(40,120,255,.9);background:radial-gradient(circle at 50% 34%,rgba(30,100,255,.28),transparent 28%),radial-gradient(circle at 50% 46%,rgba(12,55,145,.34),transparent 48%),linear-gradient(90deg,#020202 0%,#08101d 50%,#020202 100%)}
+.awards-hero::after{content:"";position:absolute;inset:0;z-index:1;opacity:.22;pointer-events:none;background:radial-gradient(circle at 50% 50%,transparent 0 35%,rgba(0,0,0,.62) 78%),repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 4px)}
+.hero-brand{position:absolute;top:26px;left:22px;z-index:5;text-align:left;text-shadow:0 3px 14px #000}
+.hero-brand strong{display:block;font-size:1.9rem;letter-spacing:.5px}
+.hero-brand span{display:block;margin-top:4px;color:#eee;font-weight:700}
+.hero-vehicle{position:absolute;bottom:-18px;z-index:2;width:40%;max-height:385px;object-fit:contain;pointer-events:none;filter:contrast(1.11) saturate(1.04)}
+.hero-vehicle.left{left:-6%;bottom:-6px;transform:rotate(2deg);-webkit-mask-image:none;mask-image:none}
+.hero-vehicle.right{right:-2%;-webkit-mask-image:linear-gradient(270deg,#000 0%,#000 82%,rgba(0,0,0,.94) 90%,transparent 100%);mask-image:linear-gradient(270deg,#000 0%,#000 82%,rgba(0,0,0,.94) 90%,transparent 100%)}
+.hero-content{position:relative;z-index:5;max-width:760px;margin:auto;padding:46px 20px 34px}
+.hero-content h1{margin:0;font-size:clamp(3.35rem,6.8vw,6rem);line-height:.92;text-transform:uppercase;letter-spacing:4px;text-shadow:0 4px 0 rgba(0,0,0,.45),0 0 24px rgba(38,116,255,.32),0 0 28px #000}
+.hero-content p{max-width:650px;margin:24px auto 0;font-size:1.18rem;line-height:1.45;color:#f0f0f0;text-shadow:0 0 12px #000}
+.page-content{max-width:1400px;margin:auto;padding:10px 16px 50px}
+.accordion-wrap{display:grid;gap:10px}
+.award-section{--award-color:var(--blue);position:relative;overflow:hidden;border:1px solid var(--award-color);border-radius:12px;background:#050505;box-shadow:0 0 16px rgba(0,0,0,.58)}
+.award-visual{position:absolute;inset:0;z-index:0;pointer-events:none}
+.award-visual img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;filter:saturate(1.18) contrast(1.05) brightness(.92);transition:transform .35s ease}
+.award-section:hover .award-visual img{transform:scale(1.025)}
+.award-section::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.90) 30%,rgba(0,0,0,.10) 64%,rgba(0,0,0,.42) 100%)}
+.award-toggle{position:relative;z-index:2;width:100%;min-height:108px;padding:14px 24px;border:0;color:#fff;background:transparent;cursor:pointer;display:grid;grid-template-columns:110px minmax(0,1fr) auto;align-items:center;gap:18px;text-align:left}
+.icon-badge{width:80px;height:80px;display:grid;place-items:center;justify-self:center;color:var(--award-color);border:3px solid var(--award-color);background:rgba(0,0,0,.62);clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0 50%)}
+.icon-badge svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+.award-heading h2{margin:0;color:var(--award-color);font-size:clamp(1.45rem,2.6vw,2.2rem);line-height:1;letter-spacing:2px;text-transform:uppercase;text-shadow:0 2px 12px #000}
+.award-count{display:block;margin-top:5px;color:var(--award-color);font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.award-description{max-width:450px;margin:7px 0 0;color:#fff;font-size:1rem;line-height:1.35;text-shadow:0 2px 10px #000}
+.arrow{color:var(--award-color);font-size:2.7rem;line-height:1;transition:transform .25s ease}
+.award-section.open .arrow{transform:rotate(180deg)}
+.award-content{position:relative;z-index:2;max-height:0;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.9));transition:max-height .35s ease}
+.award-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px;padding:0 24px 24px}
+.award-card{padding:15px;text-align:left;border:1px solid rgba(255,255,255,.14);border-left:5px solid var(--award-color);border-radius:10px;background:rgba(0,0,0,.76);box-shadow:0 0 14px rgba(0,0,0,.45);backdrop-filter:blur(2px)}
+.award-card strong{display:block;margin-bottom:6px;font-size:1.02rem}
+.award-card p{margin:0;color:#d8d8d8;font-size:.95rem;line-height:1.42}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
+.section-box{padding:22px;text-align:left;border:1px solid rgba(58,134,255,.72);border-radius:12px;background:linear-gradient(135deg,#101820,#0a1017);box-shadow:0 0 18px rgba(0,0,0,.46)}
+.section-box h2{margin:0 0 14px;color:var(--blue);letter-spacing:2px;text-transform:uppercase}
+.judge-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:0;padding:0;list-style:none}
+.judge-list li{position:relative;padding-left:26px}
+.judge-list li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.gallery-callout{display:flex;align-items:center;gap:18px}
+.gallery-icon{width:58px;height:58px;flex:0 0 auto;color:var(--blue)}
+.gallery-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.button{display:inline-block;margin-top:8px;padding:13px 28px;color:#fff;font-weight:800;text-decoration:none;border-radius:8px;background:var(--blue);box-shadow:0 0 15px rgba(58,134,255,.35);transition:.25s ease}
+.button:hover{transform:translateY(-2px);background:#2667cc}
+footer{margin-top:50px;padding:24px 20px;color:#aaa;font-size:.9rem;border-top:2px solid var(--blue);background:#0a0a0a}
+.footer-main{margin-bottom:6px;color:#fff;font-weight:800}
+@media(max-width:1050px){.hero-brand{display:none}.hero-vehicle.left{left:-12%;width:52%;opacity:.48}.hero-vehicle.right{right:-12%;width:52%;opacity:.48}}
+@media(max-width:900px){.award-toggle{grid-template-columns:86px minmax(0,1fr) auto;padding:14px 16px}.icon-badge{width:68px;height:68px}.icon-badge svg{width:34px;height:34px}.info-grid{grid-template-columns:1fr}.judge-list{grid-template-columns:1fr}}
+@media(max-width:700px){.nav a{display:inline-block;margin:6px 8px;font-size:.84rem}.awards-hero{min-height:330px}.hero-content{padding:42px 14px 30px}.hero-content h1{letter-spacing:2px}.hero-content p{font-size:1.03rem}.award-toggle{min-height:128px;grid-template-columns:1fr auto}.icon-badge{display:none}.award-list{grid-template-columns:1fr;padding:0 16px 20px}.gallery-callout{flex-direction:column;align-items:flex-start}}
+</style>
 </head>
-
 <body>
-
 <nav class="nav">
 <a href="index.html#home">Home</a>
 <a href="index.html#register">Register</a>
 <a href="index.html#payment">Payment</a>
 <a href="index.html#gallery">Gallery</a>
+<a class="active" href="awards.html">Awards</a>
 <a href="index.html#faq">FAQ</a>
 <a href="sponsors.html">Sponsors</a>
 <a href="index.html#contact">Contact</a>
 <a href="index.html#share">QR Code</a>
 </nav>
 
-<div class="hero-banner">
-  <img src="assets/banners/banner 2.0.png" alt="L24 Cincy Car Show Banner">
-</div>
+<header class="awards-hero">
+  <div class="hero-brand"><strong>L24 Cincy</strong><span>Car, Truck & Bike Show</span></div>
+  <img class="hero-vehicle left" src="assets/awards/hero-motorcycle.png" alt="Motorcycle at the L24 Cincy Car, Truck and Bike Show">
+  <img class="hero-vehicle right" src="assets/awards/hero-bronco.jpg" alt="Ford Bronco at the L24 Cincy Car, Truck and Bike Show">
+  <div class="hero-content">
+    <h1>Awards & Judging</h1>
+    <p>Learn about all 24 trophies, how judging works, and what it takes to bring home an award at the L24 Cincy Car, Truck & Bike Show.</p>
+  </div>
+</header>
 
-<div class="page-content">
+<main class="page-content">
+<section class="accordion-wrap">
 
-  <h1>Awards Gallery</h1>
+  <article class="award-section" style="--award-color:var(--gold);">
+    <div class="award-visual"><img src="assets/awards/premier-awards-trans-am.jpg" alt=""></div>
+    <button class="award-toggle" type="button" aria-expanded="false">
+      <div class="icon-badge"><svg viewBox="0 0 64 64"><path d="M22 12h20v12c0 8-4.5 14-10 14S22 32 22 24V12z"/><path d="M22 17H12v7c0 7 5 11 11 11"/><path d="M42 17h10v7c0 7-5 11-11 11"/><path d="M32 38v9M22 52h20M26 47h12"/></svg></div>
+      <div class="award-heading"><h2>Premier Awards</h2><span class="award-count">6 Awards</span><p class="award-description">Our most prestigious awards with the largest trophies.</p></div>
+      <div class="arrow">⌄</div>
+    </button>
+    <div class="award-content"><div class="award-list">
+      <div class="award-card"><strong>Best of Show</strong><p>Highest-scoring vehicle in the show.</p></div>
+      <div class="award-card"><strong>People's Choice</strong><p>Voted on by participants and spectators.</p></div>
+      <div class="award-card"><strong>Best Local 24 Member</strong><p>Best vehicle owned by a SMART Local 24 member.</p></div>
+      <div class="award-card"><strong>Best Car</strong><p>Best overall passenger car.</p></div>
+      <div class="award-card"><strong>Best Truck</strong><p>Best overall truck.</p></div>
+      <div class="award-card"><strong>Best Motorcycle</strong><p>Best overall motorcycle.</p></div>
+    </div></div>
+  </article>
 
-  <div class="subtitle">
-    Awards, trophies, winners, and highlights from the 1st Annual L24 Cincy Car, Truck & Bike Show
+  <article class="award-section" style="--award-color:#1f6bff;">
+    <div class="award-visual"><img src="assets/awards/best-in-class-green-truck.jpg" alt=""></div>
+    <button class="award-toggle" type="button" aria-expanded="false">
+      <div class="icon-badge"><svg viewBox="0 0 64 64"><path d="M14 36l5-13h26l5 13"/><path d="M18 36h28c4 0 7 3 7 7v5H11v-5c0-4 3-7 7-7z"/><path d="M20 48a5 5 0 1 0 10 0M34 48a5 5 0 1 0 10 0"/><path d="M23 28h18"/></svg></div>
+      <div class="award-heading"><h2>Best in Class Awards</h2><span class="award-count">10 Awards</span><p class="award-description">Recognizing excellence across specific judging categories.</p></div>
+      <div class="arrow">⌄</div>
+    </button>
+    <div class="award-content"><div class="award-list">
+      <div class="award-card"><strong>Best American Muscle</strong><p>Best American-built muscle or performance vehicle.</p></div>
+      <div class="award-card"><strong>Best Import</strong><p>Best foreign-manufactured vehicle.</p></div>
+      <div class="award-card"><strong>Best Off-Road</strong><p>Best off-road capable vehicle.</p></div>
+      <div class="award-card"><strong>Best Engine Bay</strong><p>Outstanding engine compartment presentation and workmanship.</p></div>
+      <div class="award-card"><strong>Best Paint</strong><p>Exceptional paint quality and finish.</p></div>
+      <div class="award-card"><strong>Best Interior</strong><p>Outstanding interior craftsmanship and appearance.</p></div>
+      <div class="award-card"><strong>Best Fabrication</strong><p>Exceptional custom fabrication and craftsmanship.</p></div>
+      <div class="award-card"><strong>Best Original</strong><p>Vehicle that best represents its factory-original design and specifications, whether preserved or professionally restored.</p></div>
+      <div class="award-card"><strong>Best Lowered</strong><p>Best lowered or stance-oriented vehicle.</p></div>
+      <div class="award-card"><strong>Best Wheels</strong><p>Outstanding wheel selection, fitment, finish, and overall appearance.</p></div>
+    </div></div>
+  </article>
+
+  <article class="award-section" style="--award-color:var(--silver);">
+    <div class="award-visual"><img src="assets/awards/special-recognition-interior.jpg" alt=""></div>
+    <button class="award-toggle" type="button" aria-expanded="false">
+      <div class="icon-badge"><svg viewBox="0 0 64 64"><path d="M32 10l6.5 14 15.5 2-11.5 10.5 3 15.5L32 44l-13.5 8 3-15.5L10 26l15.5-2L32 10z"/></svg></div>
+      <div class="award-heading"><h2>Special Recognition Awards</h2><span class="award-count">5 Awards</span><p class="award-description">Honoring dedication, craftsmanship, creativity, and exceptional effort.</p></div>
+      <div class="arrow">⌄</div>
+    </button>
+    <div class="award-content"><div class="award-list">
+      <div class="award-card"><strong>Built Not Bought Award</strong><p>Owner personally completed the majority of the build or restoration.</p></div>
+      <div class="award-card"><strong>Most Creative Build Award</strong><p>Recognizes originality, creativity, and overall vision.</p></div>
+      <div class="award-card"><strong>Clean Freak Award</strong><p>Cleanest vehicle inside and out.</p></div>
+      <div class="award-card"><strong>Daily Driver Award</strong><p>Regularly driven and exceptionally maintained.</p></div>
+      <div class="award-card"><strong>Sleeper Award</strong><p>An unassuming vehicle hiding impressive performance.</p></div>
+    </div></div>
+  </article>
+
+  <article class="award-section" style="--award-color:var(--orange);">
+    <div class="award-visual"><img src="assets/awards/fun-community-hot-rod.jpg" alt=""></div>
+    <button class="award-toggle" type="button" aria-expanded="false">
+      <div class="icon-badge"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><path d="M23 27h.1M41 27h.1"/><path d="M23 38c5 6 13 6 18 0"/></svg></div>
+      <div class="award-heading"><h2>Fun & Community Awards</h2><span class="award-count">3 Awards</span><p class="award-description">Lighthearted awards that bring smiles to the show.</p></div>
+      <div class="arrow">⌄</div>
+    </button>
+    <div class="award-content"><div class="award-list">
+      <div class="award-card"><strong>Most Likely to Get Pulled Over</strong><p>Most likely to attract law-enforcement attention.</p></div>
+      <div class="award-card"><strong>OSHA Would Like a Word</strong><p>Most outrageous or humorously questionable modifications.</p></div>
+      <div class="award-card"><strong>Kid's Choice Award</strong><p>Selected by children attending the show.</p></div>
+    </div></div>
+  </article>
+
+</section>
+
+<section class="info-grid">
+  <div class="section-box">
+    <h2>Judging Information</h2>
+    <ul class="judge-list">
+      <li>Vehicles may receive only one trophy.</li>
+      <li>Vehicles must remain until awards are presented to qualify.</li>
+      <li>Judges' decisions are final.</li>
+      <li>People's Choice is voted on by participants and spectators.</li>
+      <li>Ties are broken by the judging panel.</li>
+    </ul>
   </div>
 
-  <div class="gallery-grid">
-
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09244 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09256 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09258 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09259 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09260 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09299 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09307 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09344 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09383 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09417 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09426 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09427 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09428 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09430 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09434 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09439 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09441 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09442 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09445 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09446 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09447 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09463 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09468 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09470 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09482 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09496 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09509 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09511 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09517 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09520 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09525 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09526 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09530 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09531 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09535 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09537 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09540 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09544 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09547 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09551 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09553 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09557 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09559 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09562 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09564 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09569 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09570 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09573 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09578 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09582 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09584 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09588 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09591 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09593 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09595 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09598 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09600 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09603 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09604 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09609 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09613 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09623 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09624 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09629 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09630 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09633 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09637 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09640 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09647 (Large).jpg"></div>
-    <div class="gallery-item"><img loading="lazy" src="gallery/awards/JDW09650 (Large).jpg"></div>
-
+  <div class="section-box gallery-callout">
+    <div class="gallery-icon"><svg viewBox="0 0 64 64"><path d="M17 24h8l4-6h10l4 6h4c4 0 7 3 7 7v17c0 4-3 7-7 7H17c-4 0-7-3-7-7V31c0-4 3-7 7-7z"/><circle cx="32" cy="40" r="10"/><path d="M47 31h.1"/></svg></div>
+    <div><h2>View Previous Winners</h2><p>Check out photos from past shows and see who took home the hardware.</p><a class="button" href="awards-gallery.html">View Awards Gallery</a></div>
   </div>
-
-  <div class="button-row">
-    <a class="button" href="index.html">RETURN HOME</a>
-    <a class="button" href="vehicles.html">VEHICLES</a>
-    <a class="button" href="general.html">GENERAL PHOTOS</a>
-    <a class="button" href="raffles.html">RAFFLES</a>
-  </div>
-
-</div>
+</section>
+</main>
 
 <footer>
-  L24 Cincy Car, Truck & Bike Show
+  <div class="footer-main">Hosted by SMART Local 24 Cincinnati</div>
+  <div>Contact: ncollini@smw24.org | Call/Text: 513-617-8856 | Venmo: @NCollini</div>
 </footer>
 
+<script>
+const sections=document.querySelectorAll(".award-section");
+function updateHeight(section){
+  const content=section.querySelector(".award-content");
+  content.style.maxHeight=section.classList.contains("open")?content.scrollHeight+"px":"0px";
+}
+sections.forEach(section=>{
+  const button=section.querySelector(".award-toggle");
+  button.addEventListener("click",()=>{
+    section.classList.toggle("open");
+    button.setAttribute("aria-expanded",section.classList.contains("open"));
+    updateHeight(section);
+  });
+  updateHeight(section);
+});
+window.addEventListener("resize",()=>sections.forEach(updateHeight));
+</script>
 </body>
 </html>
