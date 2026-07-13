@@ -695,7 +695,7 @@ Participants may also submit registration payment in person at the
 
 <a class="gallery-card awards-card" href="awards-gallery.html">
 <div class="gallery-card-content">
-<h3>Awards</h3>
+<h3>Awards Gallery</h3>
 <span>Trophies & winners</span>
 </div>
 </a>
@@ -726,8 +726,8 @@ Common questions regarding registration, judging, raffles, and event logistics.
 
 <div class="faq-container">
 
-<button class="faq-question">🚗 Registration & Participation</button>
-<div class="faq-answer">
+<button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-registration-answer">🚗 Registration & Participation</button>
+<div class="faq-answer" id="faq-registration-answer">
 <p><strong>Q:</strong> Can anyone participate and/or register a vehicle?<br>
 <strong>A:</strong> The show is open to the public and we encourage everyone interested to participate!</p>
 
@@ -744,19 +744,16 @@ Common questions regarding registration, judging, raffles, and event logistics.
 <strong>A:</strong> Yes.</p>
 </div>
 
-<button class="faq-question">🏆 Judging & Awards</button>
-<div class="faq-answer">
+<button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-judging-answer">🏆 Judging & Awards</button>
+<div class="faq-answer" id="faq-judging-answer">
 <p><strong>Q:</strong> Do I have to stay the duration of the show?<br>
 <strong>A:</strong> Yes. If you want to be judged and qualify for trophies, you must remain for the duration of the event.</p>
 
 <p><strong>Q:</strong> Who will be judging?<br>
-<strong>A:</strong> People’s Choice is judged by registered participants. All other trophies will be judged by our panel of judges.</p>
+<strong>A:</strong> People’s Choice is voted on by registered vehicle participants only. Each registered vehicle entry receives one ballot. Participants may not vote for their own vehicle. All other trophies will be judged by our panel of judges.</p>
 
 <p><strong>Q:</strong> Can I win more than one trophy?<br>
 <strong>A:</strong> No. If you qualify for more than one, the highest-priority award will be given first.</p>
-
-<p><strong>Q:</strong> How will the Top 10 be determined?<br>
-<strong>A:</strong> By the highest remaining scores after specialty and top awards are assigned.</p>
 
 <p><strong>Q:</strong> How are ties handled in scoring?<br>
 <strong>A:</strong> Ties will be decided by the judges’ panel based on overall points and notes.</p>
@@ -765,14 +762,14 @@ Common questions regarding registration, judging, raffles, and event logistics.
 <strong>A:</strong> Judges may need hoods, doors, or trunks open. Please ensure your vehicle is accessible.</p>
 </div>
 
-<button class="faq-question">🎟 Raffles & Drawings</button>
-<div class="faq-answer">
+<button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-raffles-answer">🎟 Raffles & Drawings</button>
+<div class="faq-answer" id="faq-raffles-answer">
 <p><strong>Q:</strong> What if I win a raffle or the 50/50 and I already left?<br>
 <strong>A:</strong> All unclaimed raffles will be re-drawn at 5pm if not claimed following the specific drawing.</p>
 </div>
 
-<button class="faq-question">📸 Event Rules & Logistics</button>
-<div class="faq-answer">
+<button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-logistics-answer">📸 Event Rules & Logistics</button>
+<div class="faq-answer" id="faq-logistics-answer">
 <p><strong>Q:</strong> Will there be professional photos or media at the event?<br>
 <strong>A:</strong> Yes. By participating, you consent to photos of you and your vehicle being used in Local 24 media and promotions.</p>
 
@@ -904,12 +901,10 @@ const faqQuestions = document.querySelectorAll(".faq-question");
 faqQuestions.forEach(question => {
     question.addEventListener("click", () => {
         const answer = question.nextElementSibling;
+        const isOpen = answer.style.display === "block";
 
-        if(answer.style.display === "block"){
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
+        answer.style.display = isOpen ? "none" : "block";
+        question.setAttribute("aria-expanded", String(!isOpen));
     });
 });
 </script>
