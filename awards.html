@@ -44,6 +44,18 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);backgroun
 .award-card{padding:15px;text-align:left;border:1px solid rgba(255,255,255,.14);border-left:5px solid var(--award-color);border-radius:10px;background:rgba(0,0,0,.76);box-shadow:0 0 14px rgba(0,0,0,.45);backdrop-filter:blur(2px)}
 .award-card strong{display:block;margin-bottom:6px;font-size:1.02rem}
 .award-card p{margin:0;color:#d8d8d8;font-size:.95rem;line-height:1.42}
+.trophy-showcase{position:relative;overflow:hidden;margin-top:16px;padding:26px;border:1px solid rgba(58,134,255,.72);border-radius:12px;background:linear-gradient(135deg,#101820,#0a1017);box-shadow:0 0 18px rgba(0,0,0,.46);text-align:left}
+.trophy-showcase::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--blue),rgba(40,120,255,.12));pointer-events:none}
+.trophy-showcase h2{margin:0;color:var(--blue);font-size:clamp(1.65rem,3vw,2.25rem);letter-spacing:2px;text-transform:uppercase}
+.trophy-showcase-intro{max-width:760px;margin:10px 0 22px;color:#d8d8d8;font-size:1rem;line-height:1.55}
+.trophy-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.trophy-grid:empty{min-height:150px;place-items:center;border:1px dashed rgba(40,120,255,.58);border-radius:10px;background:linear-gradient(135deg,rgba(40,120,255,.08),rgba(0,0,0,.22))}
+.trophy-grid:empty::before{content:"Trophy photos coming soon";color:#aebed8;font-size:.9rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.trophy-card{overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(0,0,0,.66);box-shadow:0 0 14px rgba(0,0,0,.45)}
+.trophy-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#050505}
+.trophy-card-copy{padding:16px}
+.trophy-card h3{margin:0;color:#fff;font-size:1.08rem}
+.trophy-card p{margin:7px 0 0;color:#c8c8c8;font-size:.93rem;line-height:1.45}
 .info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
 .section-box{padding:22px;text-align:left;border:1px solid rgba(58,134,255,.72);border-radius:12px;background:linear-gradient(135deg,#101820,#0a1017);box-shadow:0 0 18px rgba(0,0,0,.46)}
 .section-box h2{margin:0 0 14px;color:var(--blue);letter-spacing:2px;text-transform:uppercase}
@@ -59,7 +71,7 @@ footer{margin-top:50px;padding:24px 20px;color:#aaa;font-size:.9rem;border-top:2
 .footer-main{margin-bottom:6px;color:#fff;font-weight:800}
 @media(max-width:1050px){.hero-brand{display:none}.hero-vehicle.left{left:-12%;width:52%;opacity:.48}.hero-vehicle.right{right:-12%;width:52%;opacity:.48}}
 @media(max-width:900px){.award-toggle{grid-template-columns:86px minmax(0,1fr) auto;padding:14px 16px}.icon-badge{width:68px;height:68px}.icon-badge svg{width:34px;height:34px}.info-grid{grid-template-columns:1fr}.judge-list{grid-template-columns:1fr}}
-@media(max-width:700px){.nav a{display:inline-block;margin:6px 8px;font-size:.84rem}.awards-hero{min-height:330px}.hero-content{padding:42px 14px 30px}.hero-content h1{letter-spacing:2px}.hero-content p{font-size:1.03rem}.award-toggle{min-height:128px;grid-template-columns:1fr auto}.icon-badge{display:none}.award-list{grid-template-columns:1fr;padding:0 16px 20px}.gallery-callout{flex-direction:column;align-items:flex-start}}
+@media(max-width:700px){.nav a{display:inline-block;margin:6px 8px;font-size:.84rem}.awards-hero{min-height:330px}.hero-content{padding:42px 14px 30px}.hero-content h1{letter-spacing:2px}.hero-content p{font-size:1.03rem}.award-toggle{min-height:128px;grid-template-columns:1fr auto}.icon-badge{display:none}.award-list{grid-template-columns:1fr;padding:0 16px 20px}.trophy-showcase{padding:22px 18px}.trophy-grid{grid-template-columns:1fr}.gallery-callout{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -157,6 +169,26 @@ footer{margin-top:50px;padding:24px 20px;color:#aaa;font-size:.9rem;border-top:2
     </div></div>
   </article>
 
+</section>
+
+<section class="trophy-showcase" aria-labelledby="trophy-showcase-title">
+  <h2 id="trophy-showcase-title">Trophies You Can Win</h2>
+  <p class="trophy-showcase-intro">Trophy photos will be added as they become available. Check back soon to see what this year’s winners will take home.</p>
+
+  <div class="trophy-grid"><!--
+      FUTURE TROPHY PHOTO CARDS:
+      Add each trophy photo here by duplicating this simple card.
+      Add the real trophy image path to the img src attribute before publishing.
+      The caption paragraph is optional and may be removed when it is not needed.
+
+      <article class="trophy-card">
+        <img alt="DESCRIBE THE TROPHY">
+        <div class="trophy-card-copy">
+          <h3>Trophy or Category Name</h3>
+          <p>Optional short caption.</p>
+        </div>
+      </article>
+  --></div>
 </section>
 
 <section class="info-grid">
