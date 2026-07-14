@@ -410,6 +410,19 @@
       max-width:220px;
     }
 
+    /* Optical sizing keeps dense and wide marks balanced without matching dimensions. */
+    .sponsor-logo--airecon{
+      width:96%;
+      height:auto;
+      max-height:86%;
+    }
+
+    .sponsor-logo--local-24{
+      width:clamp(100px,38%,160px);
+      height:auto;
+      max-height:92%;
+    }
+
     .sponsor-card-copy{
       display:flex;
       flex:1;
@@ -648,7 +661,7 @@ We sincerely thank the businesses and organizations supporting the 2026 L24 Cinc
 <div class="sponsor-grid sponsor-grid--best">
 <div class="sponsor-card sponsor-card--best">
 <div class="sponsor-logo-surface">
-<img class="sponsor-logo" src="assets/sponsors/airecon.webp" alt="Airecon Manufacturing Corp.">
+<img class="sponsor-logo sponsor-logo--airecon" src="assets/sponsors/airecon.webp" alt="Airecon Manufacturing Corp.">
 </div>
 <div class="sponsor-card-copy">
 <h4>Airecon Manufacturing Corp.</h4>
@@ -658,7 +671,7 @@ We sincerely thank the businesses and organizations supporting the 2026 L24 Cinc
 
 <div class="sponsor-card sponsor-card--best">
 <div class="sponsor-logo-surface">
-<img class="sponsor-logo" src="assets/sponsors/sheet-metal-workers-local-24.webp" alt="Sheet Metal Workers Local 24">
+<img class="sponsor-logo sponsor-logo--local-24" src="assets/sponsors/sheet-metal-workers-local-24.webp" alt="Sheet Metal Workers Local 24">
 </div>
 <div class="sponsor-card-copy">
 <h4>Sheet Metal Workers Local 24</h4>
