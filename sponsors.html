@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Explore sponsorship opportunities for the L24 Cincy Car, Truck &amp; Bike Show and support Cincinnati apprentices.">
-  <title>Become a Sponsor | L24 Cincy Car Show</title>
+  <meta name="description" content="Meet the 2026 L24 Cincy Car, Truck &amp; Bike Show sponsors and explore opportunities to support Cincinnati apprentices.">
+  <title>2026 Event Sponsors | L24 Cincy Car Show</title>
 
   <style>
 
@@ -267,28 +267,172 @@
       font-weight:bold;
     }
 
-    .logo-levels{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:16px;
-      margin-top:20px;
+    .sponsor-recognition{
+      border-top:4px solid #3a86ff;
+      background:linear-gradient(180deg,#151f33 0%,#151515 22%,#1a1a1a 100%);
     }
 
-    .logo-level{
-      min-height:125px;
-      padding:18px;
-      background:#0d1b2a;
-      border:1px dashed #3a86ff;
-      border-radius:8px;
+    .sponsor-recognition > p{
+      max-width:780px;
+      margin:0 auto 30px;
       color:#d7e6ff;
+      font-size:1.08rem;
+    }
+
+    .recognition-tier{
+      margin-top:34px;
       text-align:left;
     }
 
-    .logo-level h3{
-      color:#3a86ff;
+    .recognition-tier:first-of-type{
+      margin-top:0;
+    }
+
+    .recognition-tier > h3{
+      margin:0 0 16px;
+      color:#fff;
+      font-size:1.2rem;
+      letter-spacing:1px;
       text-transform:uppercase;
-      letter-spacing:.5px;
-      margin-bottom:8px;
+    }
+
+    .recognition-tier > h3::after{
+      content:"";
+      display:block;
+      width:64px;
+      height:3px;
+      margin-top:9px;
+      border-radius:999px;
+      background:#3a86ff;
+    }
+
+    .sponsor-grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .sponsor-grid--best{
+      grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));
+    }
+
+    .sponsor-grid--platinum{
+      grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
+    }
+
+    .sponsor-grid--gold{
+      grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+    }
+
+    .sponsor-grid--silver{
+      grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));
+    }
+
+    .sponsor-grid--platinum .sponsor-card:only-child{
+      width:100%;
+      max-width:780px;
+      justify-self:center;
+    }
+
+    .sponsor-grid--silver .sponsor-card:only-child{
+      width:100%;
+      max-width:520px;
+      justify-self:center;
+    }
+
+    .sponsor-card{
+      display:flex;
+      min-width:0;
+      height:100%;
+      flex-direction:column;
+      overflow:hidden;
+      background:#0d1b2a;
+      color:#fff;
+      border:1px solid #31557f;
+      border-radius:12px;
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+      text-align:center;
+      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+    }
+
+    a.sponsor-card{
+      text-decoration:none;
+    }
+
+    .sponsor-card:hover{
+      transform:translateY(-2px);
+      border-color:#3a86ff;
+      box-shadow:0 13px 28px rgba(0,0,0,.34);
+    }
+
+    .sponsor-card:focus-visible{
+      outline:3px solid #fff;
+      outline-offset:3px;
+    }
+
+    .sponsor-logo-surface{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-width:0;
+      height:170px;
+      margin:14px 14px 0;
+      padding:22px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #d4dce8;
+      border-radius:9px;
+    }
+
+    .sponsor-card--best .sponsor-logo-surface{
+      height:220px;
+      padding:26px;
+    }
+
+    .sponsor-card--platinum .sponsor-logo-surface{
+      height:195px;
+      padding:26px;
+    }
+
+    .sponsor-card--silver .sponsor-logo-surface{
+      height:155px;
+    }
+
+    .sponsor-logo{
+      display:block;
+      width:100%;
+      height:100%;
+      min-width:0;
+      object-fit:contain;
+    }
+
+    .sponsor-logo--low-res{
+      width:auto;
+      max-width:220px;
+    }
+
+    .sponsor-card-copy{
+      display:flex;
+      flex:1;
+      flex-direction:column;
+      justify-content:center;
+      padding:19px 18px 21px;
+    }
+
+    .sponsor-card h4{
+      margin:0 0 7px;
+      color:#fff;
+      font-size:1.08rem;
+      line-height:1.3;
+    }
+
+    .sponsor-card p{
+      margin:0;
+      color:#9fc5ff;
+      font-size:.91rem;
+      font-weight:bold;
+      line-height:1.4;
+      text-transform:uppercase;
+      letter-spacing:.7px;
     }
 
     footer {
@@ -337,6 +481,31 @@
 
       .tier-amount{
         font-size:1.35rem;
+      }
+
+      .sponsor-logo-surface,
+      .sponsor-card--platinum .sponsor-logo-surface{
+        height:165px;
+        padding:20px;
+      }
+
+      .sponsor-card--best .sponsor-logo-surface{
+        height:195px;
+        padding:22px;
+      }
+
+      .sponsor-card--silver .sponsor-logo-surface{
+        height:150px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      .sponsor-card{
+        transition:none;
       }
     }
 
@@ -467,17 +636,132 @@ Use the flyer for donation details, event information, and the printable sponsor
 </div>
 </section>
 
-<section class="section-box">
-<h2>Sponsor Logo Recognition</h2>
+<section class="section-box sponsor-recognition" aria-labelledby="event-sponsors-heading">
+<h2 id="event-sponsors-heading">2026 Event Sponsors</h2>
 <p>
-Confirmed sponsor logos will be organized here by sponsorship level as they become available.
+We sincerely thank the businesses and organizations supporting the 2026 L24 Cincy Car, Truck &amp; Bike Show.
 </p>
-<div class="logo-levels">
-<div class="logo-level"><h3>Best in Show</h3><p>Logo recognition coming soon.</p></div>
-<div class="logo-level"><h3>Platinum</h3><p>Logo recognition coming soon.</p></div>
-<div class="logo-level"><h3>Gold</h3><p>Logo recognition coming soon.</p></div>
-<div class="logo-level"><h3>Silver</h3><p>Logo recognition coming soon.</p></div>
-<div class="logo-level"><h3>Other Donations</h3><p>Donor recognition coming soon.</p></div>
+
+<div class="recognition-tier">
+<h3>Best in Show Sponsors</h3>
+<!-- BEST IN SHOW SPONSORS -->
+<div class="sponsor-grid sponsor-grid--best">
+<div class="sponsor-card sponsor-card--best">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/airecon.webp" alt="Airecon Manufacturing Corp.">
+</div>
+<div class="sponsor-card-copy">
+<h4>Airecon Manufacturing Corp.</h4>
+<p>Best in Show Sponsor</p>
+</div>
+</div>
+
+<div class="sponsor-card sponsor-card--best">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/sheet-metal-workers-local-24.webp" alt="Sheet Metal Workers Local 24">
+</div>
+<div class="sponsor-card-copy">
+<h4>Sheet Metal Workers Local 24</h4>
+<p>Best in Show Sponsor</p>
+</div>
+</div>
+
+<!-- Example future card: duplicate and update the image path, company name, tier, and optional URL.
+<a class="sponsor-card sponsor-card--best" href="OPTIONAL-SPONSOR-URL">
+  <div class="sponsor-logo-surface"><img class="sponsor-logo" src="assets/sponsors/IMAGE-FILENAME" alt="COMPANY NAME"></div>
+  <div class="sponsor-card-copy"><h4>COMPANY NAME</h4><p>Best in Show Sponsor</p></div>
+</a>
+-->
+</div>
+</div>
+
+<div class="recognition-tier">
+<h3>Platinum Sponsors</h3>
+<!-- PLATINUM SPONSORS -->
+<div class="sponsor-grid sponsor-grid--platinum">
+<div class="sponsor-card sponsor-card--platinum">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/milwaukee.webp" alt="Milwaukee Tool">
+</div>
+<div class="sponsor-card-copy">
+<h4>Milwaukee Tool</h4>
+<p>Platinum Sponsor</p>
+</div>
+</div>
+
+<!-- Example future card: duplicate and update the image path, company name, tier, and optional URL.
+<a class="sponsor-card sponsor-card--platinum" href="OPTIONAL-SPONSOR-URL">
+  <div class="sponsor-logo-surface"><img class="sponsor-logo" src="assets/sponsors/IMAGE-FILENAME" alt="COMPANY NAME"></div>
+  <div class="sponsor-card-copy"><h4>COMPANY NAME</h4><p>Platinum Sponsor</p></div>
+</a>
+-->
+</div>
+</div>
+
+<div class="recognition-tier">
+<h3>Gold Sponsors</h3>
+<!-- GOLD SPONSORS -->
+<div class="sponsor-grid sponsor-grid--gold">
+<div class="sponsor-card sponsor-card--gold">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/phoenix-metals.svg" alt="Phoenix Metals">
+</div>
+<div class="sponsor-card-copy">
+<h4>Phoenix Metals</h4>
+<p>Gold Sponsor</p>
+</div>
+</div>
+
+<div class="sponsor-card sponsor-card--gold">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo sponsor-logo--low-res" src="assets/sponsors/ledbetter-partners.avif" alt="Ledbetter Partners LLC">
+</div>
+<div class="sponsor-card-copy">
+<h4>Ledbetter Partners LLC</h4>
+<p>Gold Sponsor</p>
+</div>
+</div>
+
+<div class="sponsor-card sponsor-card--gold">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo sponsor-logo--low-res" src="assets/sponsors/souders-financial.avif" alt="Souders Financial Group Inc.">
+</div>
+<div class="sponsor-card-copy">
+<h4>Souders Financial Group Inc.</h4>
+<p>Gold Sponsor</p>
+</div>
+</div>
+
+<!-- Example future card: duplicate and update the image path, company name, tier, and optional URL.
+<a class="sponsor-card sponsor-card--gold" href="OPTIONAL-SPONSOR-URL">
+  <div class="sponsor-logo-surface"><img class="sponsor-logo" src="assets/sponsors/IMAGE-FILENAME" alt="COMPANY NAME"></div>
+  <div class="sponsor-card-copy"><h4>COMPANY NAME</h4><p>Gold Sponsor</p></div>
+</a>
+-->
+</div>
+</div>
+
+<div class="recognition-tier">
+<h3>Silver Sponsors</h3>
+<!-- SILVER SPONSORS -->
+<div class="sponsor-grid sponsor-grid--silver">
+<div class="sponsor-card sponsor-card--silver">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/american-metal-supply.webp" alt="American Metal Supply Co.">
+</div>
+<div class="sponsor-card-copy">
+<h4>American Metal Supply Co.</h4>
+<p>Silver Sponsor</p>
+</div>
+</div>
+
+<!-- Example future card: duplicate and update the image path, company name, tier, and optional URL.
+<a class="sponsor-card sponsor-card--silver" href="OPTIONAL-SPONSOR-URL">
+  <div class="sponsor-logo-surface"><img class="sponsor-logo" src="assets/sponsors/IMAGE-FILENAME" alt="COMPANY NAME"></div>
+  <div class="sponsor-card-copy"><h4>COMPANY NAME</h4><p>Silver Sponsor</p></div>
+</a>
+-->
+</div>
 </div>
 </section>
 
