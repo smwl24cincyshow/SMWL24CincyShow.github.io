@@ -146,6 +146,10 @@
       align-items:start;
     }
 
+    .sponsor-layout > *{
+      min-width:0;
+    }
+
     .white-panel{
       background:#f8fbff;
       color:#141414;
@@ -312,7 +316,7 @@
     }
 
     .sponsor-grid--best{
-      grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));
+      grid-template-columns:repeat(3,minmax(0,1fr));
     }
 
     .sponsor-grid--platinum{
@@ -458,7 +462,17 @@
 
     @media(max-width:900px){
       .sponsor-layout{
-        grid-template-columns:1fr;
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .sponsor-grid--best{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .sponsor-grid--best .sponsor-card:last-child{
+        grid-column:1 / -1;
+        width:calc(50% - 9px);
+        justify-self:center;
       }
     }
 
@@ -475,6 +489,13 @@
 
       .section-box{
         padding:22px;
+      }
+
+      .button{
+        max-width:100%;
+        margin:8px 0;
+        padding:14px 20px;
+        overflow-wrap:anywhere;
       }
 
       h1{
@@ -509,6 +530,15 @@
 
       .sponsor-card--silver .sponsor-logo-surface{
         height:150px;
+      }
+
+      .sponsor-grid--best{
+        grid-template-columns:1fr;
+      }
+
+      .sponsor-grid--best .sponsor-card:last-child{
+        grid-column:auto;
+        width:100%;
       }
     }
 
@@ -675,6 +705,16 @@ We sincerely thank the businesses and organizations whose generosity helps make 
 </div>
 <div class="sponsor-card-copy">
 <h4>Sheet Metal Workers Local 24</h4>
+<p>Best in Show Sponsor</p>
+</div>
+</div>
+
+<div class="sponsor-card sponsor-card--best">
+<div class="sponsor-logo-surface">
+<img class="sponsor-logo" src="assets/sponsors/phb.svg" alt="Peck, Hannaford &amp; Briggs">
+</div>
+<div class="sponsor-card-copy">
+<h4>Peck, Hannaford &amp; Briggs</h4>
 <p>Best in Show Sponsor</p>
 </div>
 </div>
